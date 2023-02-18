@@ -17,7 +17,6 @@ Working with and manipulating your own geospatial data is essential for many geo
 
 ## Competencies in This Lab {-}
 
-- Assess geospatial data qualities from metadata
 - Query and extract geospatial data from an online portal
 - Build a custom address locator using geospatial data
 - Geocode addresses and assess quality
