@@ -140,7 +140,7 @@ below. A2 is the Planning District Name, and the -1 represents removing
 the last character from the string (in this case, a space). You should
 not use this equation for Victoria-Fraserview.
 
-=LEFT(A2, LEN(A2)-1)
+`=LEFT(A2, LEN(A2)-1)`
 
 Save the sheet as **census.csv**
 
@@ -169,10 +169,9 @@ both datasets.
 To redo the join, right-click the shapefile in Contents \> Joins and
 Relates.. \> Remove All Joins. Then repeat Step 3.
 
-*Q1. WHICH NEIGHBORHOOD HAS THE HIGHEST MEDIAN INCOME?*
+##### Q1. Which neighborhood has the highest median income? {.unnumbered}
 
-*Q2. IF YOU WERE TO HAVE TO CALCULATE POPULATION DENSITY, HOW WOULD YOU
-ACCOMPLISH THIS?*
+##### Q2. If you were to have to calculate population density, how would you accomplish this? {.unnumbered}
 
 ------------------------------------------------------------------------
 
@@ -228,7 +227,7 @@ areas. This can be done using Select By Attributes and Calculate Field
 (once the selected polygons are populated with 1, you can switch the
 selection and populate the others with 0).
 
-*Q3. WHAT WERE THE CAPABILITY REQUIREMENTS IN THIS ASSIGNMENT?*
+##### Q3. What were the capability requirements in this assignment? {.unnumbered}
 
 **Step 2:** Quantify the area that is capable.
 
@@ -247,8 +246,7 @@ the tool:
 
 Open **Suit_SumStats** and look at the resulting summary statistics.
 
-*Q4. WHAT PERCENTAGE OF VANCOUVER'S TOTAL AREA MIGHT BE CAPABLE OF
-HAVING A NEW COMMUNITY GARDEN?*
+##### Q4. What percentage of vancouver's total area might be capable of having a new community garden? {.unnumbered}
 
 ------------------------------------------------------------------------
 
@@ -339,15 +337,13 @@ median household income. Calculate suitability, with the weight for
 distance from a garden set to 0.5 and the weight for median household
 income set to 0.5.
 
-*Q5: WHAT FEATURES MADE AN AREA MORE SUITABLE?*
+##### Q5: What features made an area more suitable? {.unnumbered}
 
-*Q6. WHICH NEIGHBOURHOOD HAD AN INCOME SUITABILITY OF ZERO?*
+##### Q6. Which neighbourhood had an income suitability of zero? {.unnumbered}
 
-*Q7. WHAT IS THE AREA (IN HA, WITH TWO DECIMAL PLACES) OF ALL SPACES THAT
-HAVE A SUITABILITY OF GREATER THAN 0.5?*
+##### Q7. What is the area (in ha, with two decimal places) of all spaces that have a suitability of greater than 0.5? {.unnumbered}
 
-*Q8. WHAT ARE THE DIFFERENCES BETWEEN SUITABILITY AND CAPABILITY
-MODELS?*
+##### Q8. What are the differences between suitability and capability models? {.unnumbered}
 
 ------------------------------------------------------------------------
 
@@ -408,10 +404,9 @@ Your model should look similar to the one below.
     knitr::include_graphics("images/03-model.png")
 ```
 
-*Q9. WHY ARE MODELS LIKE THIS ONE VALUABLE? WHEN WOULD YOU USE THIS KIND
-OF MODEL?*
+##### Q9. Why are models like this one valuable? When would you use this kind of model? {.unnumbered}
 
-*Q10. INCLUDE A SCREENSHOT OF YOUR MODEL*
+##### Q10. Include a screenshot of your model {.unnumbered}
 
 ------------------------------------------------------------------------
 

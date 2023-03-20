@@ -211,7 +211,7 @@ space at the end. You can do this manually, or by using the equation
 below. A2 is the Planning District Name, and the -1 represents removing
 the last character from the string (in this case, a space). You should
 not use this equation for Victoria-Fraserview.</p>
-<p>=LEFT(A2, LEN(A2)-1)</p>
+<p><code>=LEFT(A2, LEN(A2)-1)</code></p>
 <p>Save the sheet as <strong>census.csv</strong></p>
 <p><strong>Step 3:</strong> Join the census data with a shapefile.</p>
 <p>Now you are going to view the census data spatially by joining the local
@@ -233,10 +233,13 @@ local-area-boundary.shp. Double-check that the spacing is the same for
 both datasets.</p>
 <p>To redo the join, right-click the shapefile in Contents &gt; Joins and
 Relates.. &gt; Remove All Joins. Then repeat Step 3.</p>
-<p><em>Q1. WHICH NEIGHBORHOOD HAS THE HIGHEST MEDIAN INCOME?</em></p>
-<p><em>Q2. IF YOU WERE TO HAVE TO CALCULATE POPULATION DENSITY, HOW WOULD YOU
-ACCOMPLISH THIS?</em></p>
+<div id="q1.-which-neighborhood-has-the-highest-median-income" class="section level5 unnumbered hasAnchor">
+<h5>Q1. Which neighborhood has the highest median income?<a href="#q1.-which-neighborhood-has-the-highest-median-income" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+</div>
+<div id="q2.-if-you-were-to-have-to-calculate-population-density-how-would-you-accomplish-this" class="section level5 unnumbered hasAnchor">
+<h5>Q2. If you were to have to calculate population density, how would you accomplish this?<a href="#q2.-if-you-were-to-have-to-calculate-population-density-how-would-you-accomplish-this" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <hr />
+</div>
 </div>
 <div id="task-2-capability" class="section level2 unnumbered hasAnchor">
 <h2>Task 2: Capability<a href="#task-2-capability" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -283,7 +286,8 @@ with the number 1 for capable areas and the number 0 for incapable
 areas. This can be done using Select By Attributes and Calculate Field
 (once the selected polygons are populated with 1, you can switch the
 selection and populate the others with 0).</p>
-<p><em>Q3. WHAT WERE THE CAPABILITY REQUIREMENTS IN THIS ASSIGNMENT?</em></p>
+<div id="q3.-what-were-the-capability-requirements-in-this-assignment" class="section level5 unnumbered hasAnchor">
+<h5>Q3. What were the capability requirements in this assignment?<a href="#q3.-what-were-the-capability-requirements-in-this-assignment" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <p><strong>Step 2:</strong> Quantify the area that is capable.</p>
 <p>Some of the polygons in <strong>Landuse2016.shp</strong> were split by the identity
 tool, and others were merged. Recalculate the area in ha. Now, you will
@@ -299,9 +303,11 @@ the tool:</p>
 <li><strong>Case field:</strong> capable</li>
 </ul>
 <p>Open <strong>Suit_SumStats</strong> and look at the resulting summary statistics.</p>
-<p><em>Q4. WHAT PERCENTAGE OF VANCOUVER’S TOTAL AREA MIGHT BE CAPABLE OF
-HAVING A NEW COMMUNITY GARDEN?</em></p>
+</div>
+<div id="q4.-what-percentage-of-vancouvers-total-area-might-be-capable-of-having-a-new-community-garden" class="section level5 unnumbered hasAnchor">
+<h5>Q4. What percentage of vancouver’s total area might be capable of having a new community garden?<a href="#q4.-what-percentage-of-vancouvers-total-area-might-be-capable-of-having-a-new-community-garden" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <hr />
+</div>
 </div>
 <div id="task-3-suitability" class="section level2 unnumbered hasAnchor">
 <h2>Task 3: Suitability<a href="#task-3-suitability" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -372,13 +378,19 @@ considered. For the above example, the equation would look like this:</p>
 median household income. Calculate suitability, with the weight for
 distance from a garden set to 0.5 and the weight for median household
 income set to 0.5.</p>
-<p><em>Q5: WHAT FEATURES MADE AN AREA MORE SUITABLE?</em></p>
-<p><em>Q6. WHICH NEIGHBOURHOOD HAD AN INCOME SUITABILITY OF ZERO?</em></p>
-<p><em>Q7. WHAT IS THE AREA (IN HA, WITH TWO DECIMAL PLACES) OF ALL SPACES THAT
-HAVE A SUITABILITY OF GREATER THAN 0.5?</em></p>
-<p><em>Q8. WHAT ARE THE DIFFERENCES BETWEEN SUITABILITY AND CAPABILITY
-MODELS?</em></p>
+<div id="q5-what-features-made-an-area-more-suitable" class="section level5 unnumbered hasAnchor">
+<h5>Q5: What features made an area more suitable?<a href="#q5-what-features-made-an-area-more-suitable" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+</div>
+<div id="q6.-which-neighbourhood-had-an-income-suitability-of-zero" class="section level5 unnumbered hasAnchor">
+<h5>Q6. Which neighbourhood had an income suitability of zero?<a href="#q6.-which-neighbourhood-had-an-income-suitability-of-zero" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+</div>
+<div id="q7.-what-is-the-area-in-ha-with-two-decimal-places-of-all-spaces-that-have-a-suitability-of-greater-than-0.5" class="section level5 unnumbered hasAnchor">
+<h5>Q7. What is the area (in ha, with two decimal places) of all spaces that have a suitability of greater than 0.5?<a href="#q7.-what-is-the-area-in-ha-with-two-decimal-places-of-all-spaces-that-have-a-suitability-of-greater-than-0.5" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+</div>
+<div id="q8.-what-are-the-differences-between-suitability-and-capability-models" class="section level5 unnumbered hasAnchor">
+<h5>Q8. What are the differences between suitability and capability models?<a href="#q8.-what-are-the-differences-between-suitability-and-capability-models" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <hr />
+</div>
 </div>
 <div id="task-4-build-a-suitability-model" class="section level2 unnumbered hasAnchor">
 <h2>Task 4: Build a Suitability Model<a href="#task-4-build-a-suitability-model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -424,10 +436,13 @@ ModelBuilder (in the search)).</p>
 <p><a href="https://pro.arcgis.com/en/pro-app/latest/help/analysis/geoprocessing/modelbuilder/modelbuilderquick-tour.htm" class="uri">https://pro.arcgis.com/en/pro-app/latest/help/analysis/geoprocessing/modelbuilder/modelbuilderquick-tour.htm</a></p>
 <p>Your model should look similar to the one below.</p>
 <p><img src="images/03-model.PNG" width="75%" /></p>
-<p><em>Q9. WHY ARE MODELS LIKE THIS ONE VALUABLE? WHEN WOULD YOU USE THIS KIND
-OF MODEL?</em></p>
-<p><em>Q10. INCLUDE A SCREENSHOT OF YOUR MODEL</em></p>
+<div id="q9.-why-are-models-like-this-one-valuable-when-would-you-use-this-kind-of-model" class="section level5 unnumbered hasAnchor">
+<h5>Q9. Why are models like this one valuable? When would you use this kind of model?<a href="#q9.-why-are-models-like-this-one-valuable-when-would-you-use-this-kind-of-model" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+</div>
+<div id="q10.-include-a-screenshot-of-your-model" class="section level5 unnumbered hasAnchor">
+<h5>Q10. Include a screenshot of your model<a href="#q10.-include-a-screenshot-of-your-model" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <hr />
+</div>
 </div>
 <div id="task-4-create-and-export-a-map" class="section level2 unnumbered hasAnchor">
 <h2>Task 4: Create and export a map<a href="#task-4-create-and-export-a-map" class="anchor-section" aria-label="Anchor link to header"></a></h2>

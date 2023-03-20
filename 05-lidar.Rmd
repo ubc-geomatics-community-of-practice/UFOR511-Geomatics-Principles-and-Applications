@@ -44,13 +44,13 @@ We will be working with LiDAR data collected over the City of Vancouver. There a
 
 **Step 1:** ArcGIS Pro has several tools that we can use to view and analyse LiDAR point clouds. In order to view the dataset, we need to import it as a LAS Dataset. On the analysis tab, click the tools button and type ‘Create LAS dataset’ in the search box. Specify your input file as all of the .las files in the LidarVan folder this lab. Name the output LAS Dataset Van_lidar.lasd and specify a coordinate system (hint: look in the specifications website). Check the ‘Compute Statistics box’. Surface Constraints can be left blank, and we want to make sure that ‘All LAS Files’ are selected for ‘Create PRJ For LAS Files’. 
 
-```{r 05-geo, out.width= "50%", echo = FALSE}
+```{r 05-geo, out.width= "30%", echo = FALSE}
     knitr::include_graphics("images/05-geo.png")
 ```
 
-**Q1. WHAT IS THE HORIZONTAL DATUM FOR THE LAS DATASET? **
+##### Q1. What is the horizontal datum for the las dataset? {.unnumbered}
 
-**Q2. WHAT IS THE VERTICAL DATUM FOR THE LAS DATASET?**
+##### Q2. What is the vertical datum for the las dataset? {.unnumbered}
 
 **Step 2:** We can now add our LAS Dataset to a Map document (insert New Map). Depending on the zoom extent, you may only see the red bounding box of the las file; this isn’t an error, you just need to zoom in to see the actual points. Alternatively, you can open the dataset in a ‘Global Scene’, although due to the size of the point cloud this might cause some lag. The default display is that no point cloud filters are applied; if you want to view only ground points, right click on the file, navigate to ‘LAS Filters’, and click ‘Ground’. If you want to investigate what the city looks like, you can add the Vancouver orthophoto.
 
@@ -61,9 +61,9 @@ Figure 2: Viewing and filtering the dataset
 
 Another way to explore the dataset is to use the Catalog. Right click Van_lidar.lasd and click on Properties. Here we can see some statistics of the point clouds, such as information regarding the Classification Codes and Returns Number.
 
-**Q3. WHAT IS THE AVERAGE POINT SPACING OF THE DATASET? **
+##### Q3. What is the average point spacing of the dataset? {.unnumbered}
 
-**Q4. WHAT PERCENTAGE OF POINTS ARE CLASSIFIED AS GROUND?**
+##### Q4. What percentage of points are classified as ground? {.unnumbered}
 
 ------------------------------------------------------------------------
 
@@ -71,17 +71,17 @@ Another way to explore the dataset is to use the Catalog. Right click Van_lidar.
 
 **Step 1:** Now that we are familiar with the dataset, we can create a DTM using the easy to use built-in functions. To do so, search for the ‘LAS Dataset to Raster’ tool, and use your LAS Dataset as the input. Since we are interested in creating a terrain model, we want to use the binning interpolation type, and make sure that we use the minimum (i.e. the lowest) points in each cell assignment. Sampling Value refers to the resolution of the raster that we are creating – we want our raster to be 10 m x 10 m. Name this raster **‘VAN_DTM’**.
 
-```{r 05-las2, out.width= "75%", echo = FALSE}
+```{r 05-las2, out.width= "50%", echo = FALSE}
     knitr::include_graphics("images/05-las2.png")
 ```
 
 Figure 3: Converting the LAS Dataset to Raster
 
-**Q5. WHY IS IT IMPORTANT TO SELECT THE MINIMUM VALUE IN THE CELL ASSIGNMENT SELECTION? (2 SENTENCE MAXIMUM)**
+##### Q5. Why is it important to select the minimum value in the cell assignment selection? (2 sentence maximum) {.unnumbered}
 
-**Q6. INCLUDE A SCREENSHOT OF YOUR DTM. **
+##### Q6. Include a screenshot of your DTM. {.unnumbered}
 
-**Q7. HOW COULD YOU VALIDATE YOUR DTM?**
+##### Q7. How could you validate your DTM? {.unnumbered}
 
 ------------------------------------------------------------------------
 
@@ -99,21 +99,21 @@ Figure 3: Converting the LAS Dataset to Raster
 
 Click Run and view your output in the map window (Figure 4).
 
-```{r 05-ubc-lidar, out.width= "75%", echo = FALSE}
+```{r 05-ubc-lidar, out.width= "50%", echo = FALSE}
     knitr::include_graphics("images/05-ubc-lidar.png")
 ```
 
 Figure 4. Lidar derived DSM of UBC Vancouver Campus
 
-**Q8. INCLUDE A SCREENSHOT OF YOUR DSM. **
+##### Q8. Include a screenshot of your DSM. {.unnumbered}
 
-**Q9. WHAT IS THE RANGE OF VALUES IN YOUR DSM? WHAT UNITS ARE THESE?**
+##### Q9. What is the range of values in your dsm? What units are these? {.unnumbered}
 
-**Q10. INTERPRET YOUR DSM. WHAT FEATURES STAND OUT? WHAT FEATURES ARE OBSCURED BY THE PIXEL SIZE?**
+##### Q10. Interpret your DSM What features stand out? What features are obscured by the pixel size? {.unnumbered}
 
-**Q11. EXPLAIN THE RELATIONSHIP BETWEEN THE VERTICAL DATUM, ELEVATION, AND HEIGHT.**
+##### Q11. Explain the relationship between the vertical datum, elevation, and height. {.unnumbered}
 
-**Q12. WHAT DOES THE IMPACT OF CELL SIZE HAVE ON THE SURFACES THAT YOU CREATED? IF YOU HAD TO REDO THE LAB, WOULD YOU CHOOSE A DIFFERENT RESOLUTION?**
+##### Q12. What does the impact of cell size have on the surfaces that you created? If you had to redo the lab, would you choose a different resolution? {.unnumbered}
 
 ------------------------------------------------------------------------
 
@@ -133,7 +133,7 @@ Figure 4. Lidar derived DSM of UBC Vancouver Campus
 
 Step 1: The first thing that we will do is add a Local Scene (Insert New Map -> New Local Scene). Add Vancouver_Ortho.tif to the scene. We can navigate through the scene using the mouse, or the on-screen navigator (Figure 6). You can learn more about navigation in ArcGIS Pro here: https://pro.arcgis.com/en/pro-app/latest/help/mapping/navigation/navigation-in-arcgis-pro.htm
 
-```{r 05-nav, out.width= "30%", echo = FALSE}
+```{r 05-nav, out.width= "20%", echo = FALSE}
     knitr::include_graphics("images/05-nav.png")
 ```
 
@@ -153,6 +153,6 @@ Take some time to play around and explore the scene. One thing we notice is that
 
 Figure 7: An example of a scene from UBC Campus.
 
-**Q14. EXPORT A SCREENSHOT OF A SCENE OF YOU CHOICE AS DESCRIBED IN STEP 5 OF THE PREVIOUS SECTION.**
+##### Q14. Export a screenshot of a scene of you choice as described in step 5 of the previous section. {.unnumbered}
 
-**Q15. WHAT IS HAPPENING AT THE EDGE OF THE BUILDINGS IN THE 3D ORTHOPHOTO? WHAT MIGHT BE CAUSING THIS?**
+##### Q15. What is happening at the edge of the buildings in the 3d orthophoto? What might be causing this? {.unnumbered}

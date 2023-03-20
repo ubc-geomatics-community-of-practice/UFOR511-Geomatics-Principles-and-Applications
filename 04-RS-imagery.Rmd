@@ -55,13 +55,13 @@ Figure 1 shows the reflective characteristics of various features of the earth's
 
 Figure 1: Reflectance characteristics of various features at different wavelengths.
 
-**Q1. For broadleaf and needle-leaf vegetation, what is the approximate wavelength that is reflected most, and what section of the ems does this range belong to??**
+##### Q1. For broadleaf and needle-leaf vegetation, what is the approximate wavelength that is reflected most, and what section of the ems does this range belong to?? {.unnumbered}
 
-**Q2. Do soil and vegetation reflect roughly the same proportion of blue light. **
+##### Q2. Do soil and vegetation reflect roughly the same proportion of blue light. {.unnumbered}
 
-**Q3. Give a wavelength (in microns) at which snow and ice, dry soil, and vegetation are indistinguishable by their reflectance. In other words, at which wavelength is the proportion of radiation reflected the same (+/- 10%) for these features?**
+##### Q3. Give a wavelength (in microns) at which snow and ice, dry soil, and vegetation are indistinguishable by their reflectance. In other words, at which wavelength is the proportion of radiation reflected the same (+/- 10%) for these features? {.unnumbered}
 
-**Q4. Broadleaf and needle leaf vegetation reflect the same amount at 0.7 microns. What causes this? Is there something contained in the foliage of both types of vegetation which causes identical spectral signatures? How does this pattern in spectral reflectance affect how we see live vegetation?**
+##### Q4. Broadleaf and needle leaf vegetation reflect the same amount at 0.7 microns. What causes this? Is there something contained in the foliage of both types of vegetation which causes identical spectral signatures? How does this pattern in spectral reflectance affect how we see live vegetation? {.unnumbered}
 
 ```{r 04-em2, out.width= "60%", echo = FALSE}
     knitr::include_graphics("images/04-em2.png")
@@ -69,7 +69,7 @@ Figure 1: Reflectance characteristics of various features at different wavelengt
 
 Figure 2: Reflectance characteristics of unknown features.
 
-**Q5. Figure 2 contains 4 additional spectra, belonging to unknown surface features. Hypothesize about what these spectra might be and provide your reasoning. Use the known features (broadleaf vegetation, wet soil, etc.) and what you have learned from class/readings to inform your choices. This is a difficult task, and educated guesses are all that is asked for. Do a bit of research, put some thought into it, and explain the reasoning for your guesses. These spectra do not represent the features which are already labeled. You must think of new features which could be observed with remote sensing.**
+##### Q5. Figure 2 contains 4 additional spectra, belonging to unknown surface features. Hypothesize about what these spectra might be and provide your reasoning. Use the known features (broadleaf vegetation, wet soil, etc.) and what you have learned from class/readings to inform your choices. This is a difficult task, and educated guesses are all that is asked for. Do a bit of research, put some thought into it, and explain the reasoning for your guesses. These spectra do not represent the features which are already labeled. You must think of new features which could be observed with remote sensing. {.unnumbered}
 
 
 ------------------------------------------------------------------------
@@ -78,13 +78,24 @@ Figure 2: Reflectance characteristics of unknown features.
 
 Table 2: Parameters of Landsat 5’s Enhanced Thematic Mapper (ETM+) sensor
 
-```{r 04-table, out.width= "100%", echo = FALSE}
-    knitr::include_graphics("images/04-table.png")
+```{r echo = FALSE}
+Band = 1:7
+wl = c('0.45-0.52', '0.52-0.60', '0.63-0.69', '0.76-0.90', '1.55-1.75', '10.40-12.50', '2.08-2.35')
+sp = c('Blue', 'Green', 'Red', 'Near Infrared', 'Middle Infrared', 'Thermal Infrared', 'Middle Infrared')
+r = c(30, 0, 30 ,3 ,30 ,60, 30)
+app = c('Coastal water mapping, differentiation of vegetation and soils.', 'Assessment of vegetation vigor.', 'Chlorophyll absorption for vegetation differentiation.', 'Biomass surveys and delineation of water bodies', 'Vegetation and soil moisture measurements. Differentiation of ice and clouds.', 'Thermal mapping, soil moisture studies, plant heat stress measurement', 'Hydrothermal mapping')
+
+df = data.frame(Band, wl, sp, r, app)
+colnames(df) <- c('Band', 'Wavelength Range (microns)', 'Spectral Region', 'Spatial Resolution (meters)', 'Applications')
+
+library(knitr)
+kable(df, align = 'c')
+
 ```
  
-**Q6: Each pixel of landsat’s thermal infrared band (band 6) covers ___ pixels of the other bands. If it helps, draw a picture of the two pixel resolutions.**
+##### Q6: Each pixel of landsat’s thermal infrared band (band 6) covers ___ pixels of the other bands. If it helps, draw a picture of the two pixel resolutions. {.unnumbered}
 
-**Q7: Band 6 is recorded with a coarser resolution because thermal radiation has a very ___ wavelength. Therefore, there is ___ energy available to sense.**
+##### Q7: Band 6 is recorded with a coarser resolution because thermal radiation has a very ___ wavelength. Therefore, there is ___ energy available to sense. {.unnumbered}
 
 **Step 1: Starting ArcGISPro**
 
@@ -93,6 +104,7 @@ To start the lab, Open a new ArcPro map project and open the the L5047026subset_
 ```{r 04-sat, out.width= "75%", echo = FALSE}
     knitr::include_graphics("images/04-sat.png")
 ```
+
 Figure 3: True colour composite of Vancouver. 
 
 **Step 2: Exploring the data**
@@ -102,6 +114,7 @@ It is now time to explore your imagery. Right click the box beside the **L504702
 ```{r 04-source, out.width= "75%", echo = FALSE}
     knitr::include_graphics("images/04-source.png")
 ```
+
 After clicking on the Raster Information, the tab should open up, and display important information about the image, such as dimensions (number of pixels in the X or Y directions), data types, projection, and resolution (listed as Projection/Pixel). This information can be useful when examining an image!
 
 From the **Raster Information**  you can see that the spatial resolution of this image is approximately 30 m by 30 m, square. That means that each pixel in the image represents an area of approximately 30 x 30 m on the ground, or 900 square meters. Furthermore, it is a Landsat 5 Thematic Mapper image of Vancouver and its surroundings taken at 22 September 1999 - Wow! Even more details are apparent – its size is 4000 by 3000 pixels, and has seven bands.
@@ -175,15 +188,15 @@ You can experiment with different band combinations by visualizing different ban
 
 Right click the bands in the Contents pane, turn different layers on and off by clicking the check mark off and on in the IsVisible section. Zoom and pan around and investigate different areas of Vancouver that you may know. Feel free to use google maps or google earth to help you orient yourself. 
 
-**Q8. In a false color composite where near landsat band 5 is mapped to the red color channel, band 4 is mapped to the green color channel, and band 3 is mapped to the blue color channel, match the following cover types to the colors that they appear in the image.**
+##### Q8. In a false color composite where near landsat band 5 is mapped to the red color channel, band 4 is mapped to the green color channel, and band 3 is mapped to the blue color channel, match the following cover types to the colors that they appear in the image. {.unnumbered}
 
-**Q9. Experiment with many different false colour composites. Which 3 bands would you combine if you wanted to analyze vegetation? Do some light research on spectral properties and the applications of different landsat bands and write a sentence or two justifying each of your choices. Then, append a screenshot of your chosen composite to your response. **
+##### Q9. Experiment with many different false colour composites. Which 3 bands would you combine if you wanted to analyze vegetation? Do some light research on spectral properties and the applications of different landsat bands and write a sentence or two justifying each of your choices. Then, append a screenshot of your chosen composite to your response. {.unnumbered}
 
-**Q10. Experiment with many different false colour composites. Which 3 bands would you combine if you wanted to analyze water quality? Do some light research on spectral properties and the applications of different landsat bands and write a sentence or two justifying each of your choices. Then, append a screenshot of your chosen composite to your response.**
+##### Q10. Experiment with many different false colour composites. Which 3 bands would you combine if you wanted to analyze water quality? Do some light research on spectral properties and the applications of different landsat bands and write a sentence or two justifying each of your choices. Then, append a screenshot of your chosen composite to your response. {.unnumbered}
 
-**Q11. Experiment with many different false colour composites. Which 3 bands would you combine if you wanted to analyze agriculture? Do some light research on spectral properties and the applications of different landsat bands and write a sentence or two justifying each of your choices. Then, append a screenshot of your chosen composite to your response.** 
+##### Q11. Experiment with many different false colour composites. Which 3 bands would you combine if you wanted to analyze agriculture? Do some light research on spectral properties and the applications of different landsat bands and write a sentence or two justifying each of your choices. Then, append a screenshot of your chosen composite to your response. {.unnumbered}
 
-**Q12. Experiment with many different false colour composites. Which 3 bands would you combine if you wanted to analyze urban areas? Do some light research on spectral properties and the applications of different landsat bands and write a sentence or two justifying each of your choices. Then, append a screenshot of your chosen composite to your response.**
+##### Q12. Experiment with many different false colour composites. Which 3 bands would you combine if you wanted to analyze urban areas? Do some light research on spectral properties and the applications of different landsat bands and write a sentence or two justifying each of your choices. Then, append a screenshot of your chosen composite to your response. {.unnumbered}
 
 **Step 4: Viewing Spectral Signatures**
 
@@ -207,9 +220,9 @@ You might have to resize the spectral chart at the bottom of your screen in orde
     knitr::include_graphics("images/04-spectral.png")
 ```
 
-**Q13. Examine your new spectral profile chart, compare the different profiles you created to the spectral profiles in figures 1 and 2. What is different between them? Why might your spectral curves look different than the ones above?**
+##### Q13. Examine your new spectral profile chart, compare the different profiles you created to the spectral profiles in figures 1 and 2. What is different between them? Why might your spectral curves look different than the ones above? {.unnumbered}
 
-**Q14. Take a screenshot of your spectral plot and paste it in your final report.**
+##### Q14. Take a screenshot of your spectral plot and paste it in your final report. {.unnumbered}
 
 ------------------------------------------------------------------------
 
@@ -219,9 +232,7 @@ Spectral indices are mathematical equations containing spectral reflectance valu
 
 NDVI is calculated with the below formula: 
 
-```{r 04-ndvi, out.width= "40%", echo = FALSE}
-    knitr::include_graphics("images/04-ndvi.png")
-```
+$\ NDVI = \frac{(NIR - RED)}{(NIR+RED)}$
 
 Where NIR is the near-infrared band (Landsat 7 Band 4) and Red is the red band (Landsat 7 Band 4). The results of this equation should be between -1 and 1 with values less than 0 representing water and values between 0-1 representing different levels of green vegetation. 
 
@@ -247,19 +258,17 @@ The “Band Arithmetic Properties” dialogue should appear. Under “Raster” 
 
 Use your knowledge of spectral indices, the NDVI formula given above and the table below fill in the NDVI calculation for your data. 
 
-**Q15. Take a screenshot of your band arithmetic equation for ndvi.**
+##### Q15. Take a screenshot of your band arithmetic equation for ndvi. {.unnumbered}
 
-**Q16. What are the minimum and maximum values of your new ndvi layer?**
+##### Q16. What are the minimum and maximum values of your new ndvi layer? {.unnumbered}
 
-**Q17. What do the dark areas in the image represent? The gray areas? The white?**
+##### Q17. What do the dark areas in the image represent? The gray areas? The white? {.unnumbered}
 
-**Q18. What information does this type of analysis give us? When and why might this tpye of analysis be used?**
+##### Q18. What information does this type of analysis give us? When and why might this tpye of analysis be used? {.unnumbered}
 
 We will now use the “Band Arithmetic” window to calculate the Normalized Difference Built-Up Index (NDBI). The NDBI highlights urban areas where there is typically a higher reflectance in the shortwave-infrared region compared to the near-infrared region. The equation is as follows: 
 
-```{r 04-ndbi, out.width= "75%", echo = FALSE}
-    knitr::include_graphics("images/04-ndbi.png")
-```
+$\ NDBI = \frac{(SWIR-NIR)}{(SWIR+NIR)}$
 
 Open the “Band Arithmetic” function and select the Landsat scene as your input raster. Under “Method” use the drop-down menu and navigate to NDBI. Using what you know about Landsat imagery select the proper bands for calculating NDBI under the “Band Indexes” box and then select “Create New Layer”. 
 
@@ -298,4 +307,4 @@ The physical requirements are as follows:
 
 - Map should be 11”x17” either as a landscape or portrait layout 
 - You should export the map as a pdf 
-- •	Your map should incorporate the suite of standard map elements: Title, scale bar, compass, legend. 
+- Your map should incorporate the suite of standard map elements: Title, scale bar, compass, legend. 

@@ -206,12 +206,12 @@ at the top right. A list of export applications should pop up—choose whichever
 Page 10 of 12to each other, you are assessing precision, when you are comparing them to the “True” locations, you are assessing accuracy.</p>
 <p><strong>Step 2:</strong> Quantitatively determine the accuracy of the points. Add two columns in the Observed attribute table and populate them with the east and north values for each point. You should have the True values from your reference point attribute table. Export both tables and bring them into excel.</p>
 <p>Calculate the horizontal accuracy for each placemark using the following equation:</p>
-<p><img src="images/02-eq1.PNG" width="30%" /></p>
+<p><span class="math inline">\(\sigma_{H_{acc}} = \sqrt{(\overline{E} - E_{true})^2 + (\overline{N} - N_{true})^2}\)</span></p>
 <p>Excel is a convenient place to use this equation. Breaking down the equation – get the mean observed East value, then subtract the “True” East value. Square this difference. Do the same for North. Add the north and east results, then take the square root of them. In excel, you can do this with the equation:</p>
-<p>=SQRT((average(observed east values)-true east value)^2+((average(observed north values)-true north value)^2))</p>
+<p><code>=SQRT((average(observed east values)-true east value)^2+((average(observed north values)-true north value)^2))</code></p>
 <p>The resulting value represents how accurate the GNSS measurements were – a lower value represents greater accuracy. Is there a noticeable difference in accuracy between your placemarks? Why do you think this is?</p>
 <p>To assess the precision, you will use the following equation:</p>
-<p><img src="images/02-eq2.PNG" width="40%" /></p>
+<p><span class="math inline">\(\sigma_{H_{pre} = \sqrt{\sigma^2_E + \sigma^2_N}}\)</span></p>
 <p>Calculate the standard deviation of the observed East and North values, square them, then add them and take the square root of the sum. In excel, you can do this with the equation:</p>
 <p>=SQRT((STDEV(observed east values)^2 + STDEV(observed values)^2))</p>
 <p>The resulting value represents how precise the GNSS measurements were – a lower value represents greater accuracy. Is there a noticeable difference in precision between your placemarks? Why do you think this is?</p>
@@ -307,6 +307,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
