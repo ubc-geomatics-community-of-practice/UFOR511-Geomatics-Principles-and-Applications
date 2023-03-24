@@ -1,0 +1,17 @@
+--- 
+title: "UFOR 511: Geomatics Principles and Applications"
+author: "UBC"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+biblio-style: apalike
+link-citations: yes
+github-repo: github.com/ubc-geomatics-community-of-practice/UFOR511-Geomatics-Principles-and-Applications/book
+url: 'https\:github.com/ubc-geomatics-community-of-practice/UFOR511-Geomatics-Principles-and-Applications/book/'
+description: "Open Educational Resources for UFOR 511 course at the University of British Columbia"
+always_allow_html: true
+---
+
+# Preface {-}
+
+This is the index page for the course materials.

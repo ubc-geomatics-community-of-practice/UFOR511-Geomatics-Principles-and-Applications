@@ -4,32 +4,34 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Lab 1 Cartographic Modelling | 03-carto-modelling.knit</title>
-  <meta name="description" content="" />
-  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
+  <title>Lab 3 Cartographic Modelling | UFOR 511: Geomatics Principles and Applications</title>
+  <meta name="description" content="Open Educational Resources for UFOR 511 course at the University of British Columbia" />
+  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Lab 1 Cartographic Modelling | 03-carto-modelling.knit" />
+  <meta property="og:title" content="Lab 3 Cartographic Modelling | UFOR 511: Geomatics Principles and Applications" />
   <meta property="og:type" content="book" />
   
-  
-  
+  <meta property="og:description" content="Open Educational Resources for UFOR 511 course at the University of British Columbia" />
+  <meta name="github-repo" content="github.com/ubc-geomatics-community-of-practice/UFOR511-Geomatics-Principles-and-Applications/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Lab 1 Cartographic Modelling | 03-carto-modelling.knit" />
+  <meta name="twitter:title" content="Lab 3 Cartographic Modelling | UFOR 511: Geomatics Principles and Applications" />
   
-  
+  <meta name="twitter:description" content="Open Educational Resources for UFOR 511 course at the University of British Columbia" />
   
 
+<meta name="author" content="UBC" />
 
 
+<meta name="date" content="2023-03-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-
+<link rel="prev" href="GNSS-data.html"/>
+<link rel="next" href="RS-imagery.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -47,6 +49,7 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
@@ -70,18 +73,62 @@
 <li><a href="./">An Open Geomatics Community of Practice</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path=""><a href="#carto-modelling"><i class="fa fa-check"></i><b>1</b> Cartographic Modelling</a>
-<ul>
-<li class="chapter" data-level="" data-path=""><a href="#lab-overview"><i class="fa fa-check"></i>Lab Overview</a>
-<ul>
-<li class="chapter" data-level="" data-path=""><a href="#learning-objectives"><i class="fa fa-check"></i>Learning Objectives</a></li>
-<li class="chapter" data-level="" data-path=""><a href="#deliverables"><i class="fa fa-check"></i>Deliverables</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="geocoding-exploring-geospatial-data.html"><a href="geocoding-exploring-geospatial-data.html"><i class="fa fa-check"></i><b>1</b> Geocoding and Exploring Geospatial Data</a><ul>
+<li class="chapter" data-level="" data-path="geocoding-exploring-geospatial-data.html"><a href="geocoding-exploring-geospatial-data.html#lab-overview"><i class="fa fa-check"></i>Lab Overview</a><ul>
+<li class="chapter" data-level="" data-path="geocoding-exploring-geospatial-data.html"><a href="geocoding-exploring-geospatial-data.html#competencies-in-this-lab"><i class="fa fa-check"></i>Competencies in This Lab</a></li>
+<li class="chapter" data-level="" data-path="geocoding-exploring-geospatial-data.html"><a href="geocoding-exploring-geospatial-data.html#deliverables"><i class="fa fa-check"></i>Deliverables</a></li>
+<li class="chapter" data-level="" data-path="geocoding-exploring-geospatial-data.html"><a href="geocoding-exploring-geospatial-data.html#data"><i class="fa fa-check"></i>Data</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path=""><a href="#task-1-download-and-prepare-data"><i class="fa fa-check"></i>Task 1: Download and prepare data</a></li>
-<li class="chapter" data-level="" data-path=""><a href="#task-2-capability"><i class="fa fa-check"></i>Task 2: Capability</a></li>
-<li class="chapter" data-level="" data-path=""><a href="#task-3-suitability"><i class="fa fa-check"></i>Task 3: Suitability</a></li>
-<li class="chapter" data-level="" data-path=""><a href="#task-4-build-a-suitability-model"><i class="fa fa-check"></i>Task 4: Build a Suitability Model</a></li>
-<li class="chapter" data-level="" data-path=""><a href="#task-4-create-and-export-a-map"><i class="fa fa-check"></i>Task 4: Create and export a map</a></li>
+<li class="chapter" data-level="" data-path="geocoding-exploring-geospatial-data.html"><a href="geocoding-exploring-geospatial-data.html#task-1-download-and-prepare-data"><i class="fa fa-check"></i>Task 1: Download and Prepare Data</a></li>
+<li class="chapter" data-level="" data-path="geocoding-exploring-geospatial-data.html"><a href="geocoding-exploring-geospatial-data.html#task-2-prepare-data"><i class="fa fa-check"></i>Task 2: Prepare Data</a></li>
+<li class="chapter" data-level="" data-path="geocoding-exploring-geospatial-data.html"><a href="geocoding-exploring-geospatial-data.html#task-3-geocoding-a-table-of-addresses"><i class="fa fa-check"></i>Task 3: Geocoding a Table of Addresses</a></li>
+<li class="chapter" data-level="" data-path="geocoding-exploring-geospatial-data.html"><a href="geocoding-exploring-geospatial-data.html#task-4-create-a-shapefile-from-csv-data"><i class="fa fa-check"></i>Task 4: Create a Shapefile from CSV data</a></li>
+<li class="chapter" data-level="" data-path="geocoding-exploring-geospatial-data.html"><a href="geocoding-exploring-geospatial-data.html#task-5-create-an-urban-map"><i class="fa fa-check"></i>Task 5: Create an Urban Map</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="GNSS-data.html"><a href="GNSS-data.html"><i class="fa fa-check"></i><b>2</b> Collecting and processing GNSS data</a><ul>
+<li class="chapter" data-level="" data-path="GNSS-data.html"><a href="GNSS-data.html#lab-overview-1"><i class="fa fa-check"></i>Lab Overview</a><ul>
+<li class="chapter" data-level="" data-path="GNSS-data.html"><a href="GNSS-data.html#learning-objectives"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="GNSS-data.html"><a href="GNSS-data.html#deliverables-1"><i class="fa fa-check"></i>Deliverables</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="GNSS-data.html"><a href="GNSS-data.html#task-1-preparing-for-gnss-data-collection"><i class="fa fa-check"></i>Task 1: Preparing for GNSS Data Collection</a></li>
+<li class="chapter" data-level="" data-path="GNSS-data.html"><a href="GNSS-data.html#task-2-collect-gnss-data"><i class="fa fa-check"></i>Task 2: Collect GNSS Data</a></li>
+<li class="chapter" data-level="" data-path="GNSS-data.html"><a href="GNSS-data.html#task-3-assess-precision-accuracy-and-possible-errors"><i class="fa fa-check"></i>Task 3: Assess Precision, Accuracy, and Possible Errors</a></li>
+<li class="chapter" data-level="" data-path="GNSS-data.html"><a href="GNSS-data.html#lab-deliverable-40-points-total"><i class="fa fa-check"></i>Lab Deliverable (40 points total)</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="carto-modelling.html"><a href="carto-modelling.html"><i class="fa fa-check"></i><b>3</b> Cartographic Modelling</a><ul>
+<li class="chapter" data-level="" data-path="carto-modelling.html"><a href="carto-modelling.html#lab-overview-2"><i class="fa fa-check"></i>Lab Overview</a><ul>
+<li class="chapter" data-level="" data-path="carto-modelling.html"><a href="carto-modelling.html#learning-objectives-1"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="carto-modelling.html"><a href="carto-modelling.html#deliverables-2"><i class="fa fa-check"></i>Deliverables</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="carto-modelling.html"><a href="carto-modelling.html#task-1-download-and-prepare-data-1"><i class="fa fa-check"></i>Task 1: Download and prepare data</a></li>
+<li class="chapter" data-level="" data-path="carto-modelling.html"><a href="carto-modelling.html#task-2-capability"><i class="fa fa-check"></i>Task 2: Capability</a></li>
+<li class="chapter" data-level="" data-path="carto-modelling.html"><a href="carto-modelling.html#task-3-suitability"><i class="fa fa-check"></i>Task 3: Suitability</a></li>
+<li class="chapter" data-level="" data-path="carto-modelling.html"><a href="carto-modelling.html#task-4-build-a-suitability-model"><i class="fa fa-check"></i>Task 4: Build a Suitability Model</a></li>
+<li class="chapter" data-level="" data-path="carto-modelling.html"><a href="carto-modelling.html#task-4-create-and-export-a-map"><i class="fa fa-check"></i>Task 4: Create and export a map</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="RS-imagery.html"><a href="RS-imagery.html"><i class="fa fa-check"></i><b>4</b> Remote Sensing Imagery Analysis</a><ul>
+<li class="chapter" data-level="" data-path="RS-imagery.html"><a href="RS-imagery.html#lab-overview-3"><i class="fa fa-check"></i>Lab Overview</a><ul>
+<li class="chapter" data-level="" data-path="RS-imagery.html"><a href="RS-imagery.html#learning-objectives-2"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="RS-imagery.html"><a href="RS-imagery.html#deliverables-3"><i class="fa fa-check"></i>Deliverables</a></li>
+<li class="chapter" data-level="" data-path="RS-imagery.html"><a href="RS-imagery.html#data-1"><i class="fa fa-check"></i>Data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="RS-imagery.html"><a href="RS-imagery.html#task-1-the-ems"><i class="fa fa-check"></i>Task 1: The EMS</a></li>
+<li class="chapter" data-level="" data-path="RS-imagery.html"><a href="RS-imagery.html#task-2-landsat-5-bands-the-ems-arcpro-software"><i class="fa fa-check"></i>Task 2: Landsat 5 Bands, the EMS &amp; ArcPro Software</a></li>
+<li class="chapter" data-level="" data-path="RS-imagery.html"><a href="RS-imagery.html#task-3-calculating-ndvi-and-built-up-index"><i class="fa fa-check"></i>Task 3: Calculating NDVI and Built Up Index</a></li>
+<li class="chapter" data-level="" data-path="RS-imagery.html"><a href="RS-imagery.html#task-4-reclassifying-spectral-indices-and-map-making"><i class="fa fa-check"></i>Task 4: Reclassifying Spectral Indices and Map Making</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="lidar.html"><a href="lidar.html"><i class="fa fa-check"></i><b>5</b> Geovisualization using LiDAR</a><ul>
+<li class="chapter" data-level="" data-path="lidar.html"><a href="lidar.html#lab-overview-4"><i class="fa fa-check"></i>Lab Overview</a><ul>
+<li class="chapter" data-level="" data-path="lidar.html"><a href="lidar.html#learning-objectives-3"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="lidar.html"><a href="lidar.html#deliverables-4"><i class="fa fa-check"></i>Deliverables</a></li>
+<li class="chapter" data-level="" data-path="lidar.html"><a href="lidar.html#data-2"><i class="fa fa-check"></i>Data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lidar.html"><a href="lidar.html#task-1-load-and-explore-the-lidar-data"><i class="fa fa-check"></i>Task 1: Load and explore the LiDAR data</a></li>
+<li class="chapter" data-level="" data-path="lidar.html"><a href="lidar.html#task-2-create-a-digital-terrain-model"><i class="fa fa-check"></i>Task 2: Create a Digital Terrain Model</a></li>
+<li class="chapter" data-level="" data-path="lidar.html"><a href="lidar.html#task-3-create-a-digital-surface-model-dsm"><i class="fa fa-check"></i>Task 3: Create a Digital Surface Model (DSM)</a></li>
+<li class="chapter" data-level="" data-path="lidar.html"><a href="lidar.html#task-4-create-a-map"><i class="fa fa-check"></i>Task 4: Create a map</a></li>
+<li class="chapter" data-level="" data-path="lidar.html"><a href="lidar.html#task-4-exploring-a-scene"><i class="fa fa-check"></i>Task 4: Exploring a scene</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -95,7 +142,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">UFOR 511: Geomatics Principles and Applications</a>
           </h1>
         </div>
 
@@ -103,19 +150,17 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<!--bookdown:title:end-->
-<!--bookdown:title:start-->
-<div id="carto-modelling" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Lab 1</span> Cartographic Modelling<a href="#carto-modelling" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="carto-modelling" class="section level1 hasAnchor">
+<h1><span class="header-section-number">Lab 3</span> Cartographic Modelling<a href="carto-modelling.html#carto-modelling" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Written by</p>
 <p>Paul Pickell</p>
-<div id="lab-overview" class="section level2 unnumbered hasAnchor">
-<h2>Lab Overview<a href="#lab-overview" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="lab-overview-2" class="section level2 unnumbered hasAnchor">
+<h2>Lab Overview<a href="carto-modelling.html#lab-overview-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In geomatics, you will often need to answer questions related to how well situated an object is dependent on its surroundings. In urban forestry for example, you might look at the ability for a tree to thrive given (a) soil characteristics, (b) how far the tree is from pollutant-heavy roadways, and (c) the number of tree vandalism crimes in the neighborhood. With data from several tree planting sites, these overlay and proximity factors can be combined using models to complete capability and suitability analyses.</p>
 <p>For this lab, you are using overlay and proximity tools to determine where in the City of Vancouver would be suitable for a new community garden.</p>
 <hr />
-<div id="learning-objectives" class="section level3 unnumbered hasAnchor">
-<h3>Learning Objectives<a href="#learning-objectives" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="learning-objectives-1" class="section level3 unnumbered hasAnchor">
+<h3>Learning Objectives<a href="carto-modelling.html#learning-objectives-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li>Download and merge census data with a spatial data</li>
 <li>Use model builder to automate geospatial tools</li>
@@ -123,8 +168,8 @@
 </ul>
 <hr />
 </div>
-<div id="deliverables" class="section level3 unnumbered hasAnchor">
-<h3>Deliverables<a href="#deliverables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="deliverables-2" class="section level3 unnumbered hasAnchor">
+<h3>Deliverables<a href="carto-modelling.html#deliverables-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li>Answers to any questions posed in the lab handout</li>
 <li>Your suitability toolbox</li>
@@ -133,8 +178,8 @@
 <hr />
 </div>
 </div>
-<div id="task-1-download-and-prepare-data" class="section level2 unnumbered hasAnchor">
-<h2>Task 1: Download and prepare data<a href="#task-1-download-and-prepare-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="task-1-download-and-prepare-data-1" class="section level2 unnumbered hasAnchor">
+<h2>Task 1: Download and prepare data<a href="carto-modelling.html#task-1-download-and-prepare-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Step 1:</strong> Download data.</p>
 <p>You will be downloading most of your data from the City of Vancouver Open Data Portal (CoV; <a href="https://opendata.vancouver.ca/pages/home/" class="uri">https://opendata.vancouver.ca/pages/home/</a>).</p>
 <p>The datasets you will need are:</p>
@@ -158,7 +203,7 @@
 <p>Click OK.</p>
 <p>Be sure to either type the variable names EXACTLY as they appear, or select them from the dropdown menu in the Custom Autofilter window (the variables are alphabetized but there are <em>many</em> of them).</p>
 <p>You should have only two rows of data, with IDs 1 and 3964. Copy the data and column names, create a new sheet, then Paste Special them transposed into the new sheet. The transpose option is underlined in red within the image below.</p>
-<p><img src="images/03-menu.PNG" width="40%" /></p>
+<p><img src="images/03-menu.png" width="40%" /></p>
 <p>Remove the ID row and both of the rows that start with “Vancouver.” The current column names are too long, have spaces, and contain special characters. These features would all cause issues in ArcGIS Pro. Additionally, two of the three column names are not meaningful to your current dataset. Rename your columns:</p>
 <ul>
 <li>“Variable” -&gt; <strong>Plan_Dist</strong></li>
@@ -181,15 +226,15 @@
 <p>Open the attribute table of local-area-boundary.shp to verify that the join succeeded. If the join did not succeed, it is likely because the cells in census.csv did not exactly match those in local-area-boundary.shp. Double-check that the spacing is the same for both datasets.</p>
 <p>To redo the join, right-click the shapefile in Contents &gt; Joins and Relates.. &gt; Remove All Joins. Then repeat Step 3.</p>
 <div id="q1.-which-neighborhood-has-the-highest-median-income" class="section level5 unnumbered hasAnchor">
-<h5>Q1. Which neighborhood has the highest median income?<a href="#q1.-which-neighborhood-has-the-highest-median-income" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<h5>Q1. Which neighborhood has the highest median income?<a href="carto-modelling.html#q1.-which-neighborhood-has-the-highest-median-income" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 </div>
 <div id="q2.-if-you-were-to-have-to-calculate-population-density-how-would-you-accomplish-this" class="section level5 unnumbered hasAnchor">
-<h5>Q2. If you were to have to calculate population density, how would you accomplish this?<a href="#q2.-if-you-were-to-have-to-calculate-population-density-how-would-you-accomplish-this" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<h5>Q2. If you were to have to calculate population density, how would you accomplish this?<a href="carto-modelling.html#q2.-if-you-were-to-have-to-calculate-population-density-how-would-you-accomplish-this" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <hr />
 </div>
 </div>
 <div id="task-2-capability" class="section level2 unnumbered hasAnchor">
-<h2>Task 2: Capability<a href="#task-2-capability" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2>Task 2: Capability<a href="carto-modelling.html#task-2-capability" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Step 1:</strong> Identify locations in Vancouver that are capable of having a new community garden.</p>
 <p>Add <strong>Landuse2016.shp</strong> to your map and look at its metadata in Catalog View (View &gt; Catalog View). Here you will see information about the dataset, including what each LU_code means.</p>
 <p>Calculate the area in ha of each polygon using “Calculate Geometry”. When creating new field names, remember that you cannot use spaces or special characters such as parentheses. Keep column names simple. Use “Select By Attributes” (either in the Map Tab of the top ribbon, or at the top of the attribute table) to select the two land uses that have the capability to be used as potential community garden spaces (R100 &amp;
@@ -215,7 +260,7 @@ U100). Additionally, select only those land uses that are greater than 0.1 ha in
 <p>Your result will have the same extent as <strong>local-area-boundary.shp</strong>, and will have polygons for each neighborhood and each capable location. There should be three unique values in LU_code: R100, U100, and no value (the cells should be blank). Change the symbology of resulting shapefile (by LU_code) and look at what you have; everything that has a blank LU_code is incapable.</p>
 <p>Create a new field (of Data Type Short) called capable, and populate it with the number 1 for capable areas and the number 0 for incapable areas. This can be done using Select By Attributes and Calculate Field (once the selected polygons are populated with 1, you can switch the selection and populate the others with 0).</p>
 <div id="q3.-what-were-the-capability-requirements-in-this-assignment" class="section level5 unnumbered hasAnchor">
-<h5>Q3. What were the capability requirements in this assignment?<a href="#q3.-what-were-the-capability-requirements-in-this-assignment" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<h5>Q3. What were the capability requirements in this assignment?<a href="carto-modelling.html#q3.-what-were-the-capability-requirements-in-this-assignment" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <p><strong>Step 2:</strong> Quantify the area that is capable.</p>
 <p>Some of the polygons in <strong>Landuse2016.shp</strong> were split by the identity tool, and others were merged. Recalculate the area in ha. Now, you will determine how much area is capable and how much is not. Open “Summary Statistics” by right-clicking the capable column in <strong>Van_Capable.</strong> For the tool:</p>
 <ul>
@@ -229,12 +274,12 @@ U100). Additionally, select only those land uses that are greater than 0.1 ha in
 <p>Open <strong>Suit_SumStats</strong> and look at the resulting summary statistics.</p>
 </div>
 <div id="q4.-what-percentage-of-vancouvers-total-area-might-be-capable-of-having-a-new-community-garden" class="section level5 unnumbered hasAnchor">
-<h5>Q4. What percentage of vancouver’s total area might be capable of having a new community garden?<a href="#q4.-what-percentage-of-vancouvers-total-area-might-be-capable-of-having-a-new-community-garden" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<h5>Q4. What percentage of vancouver’s total area might be capable of having a new community garden?<a href="carto-modelling.html#q4.-what-percentage-of-vancouvers-total-area-might-be-capable-of-having-a-new-community-garden" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <hr />
 </div>
 </div>
 <div id="task-3-suitability" class="section level2 unnumbered hasAnchor">
-<h2>Task 3: Suitability<a href="#task-3-suitability" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2>Task 3: Suitability<a href="carto-modelling.html#task-3-suitability" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Now that we know the possibly <em>capable</em> areas, we are going to determine which of them are most <em>suitable.</em></p>
 <p><strong>Step 1:</strong> Determine which areas are close to existing food trees and community gardens.</p>
 <p>Add <strong>community-gardens-and-food-trees.shp</strong> to your map. Use the “Multiple Ring Buffer” Tool to identify areas which are very close (within 200 m), close (between 200 and 400 m), and somewhat close (between 400 and 600 m) from existing food trees are community gardens.</p>
@@ -270,21 +315,21 @@ U100). Additionally, select only those land uses that are greater than 0.1 ha in
 <p><code>suitability = capability*(0.75*gard_suit + 0.25*inc_suit)</code></p>
 <p>For this exercise, distance from a garden will be weighted the same as median household income. Calculate suitability, with the weight for distance from a garden set to 0.5 and the weight for median household income set to 0.5.</p>
 <div id="q5-what-features-made-an-area-more-suitable" class="section level5 unnumbered hasAnchor">
-<h5>Q5: What features made an area more suitable?<a href="#q5-what-features-made-an-area-more-suitable" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<h5>Q5: What features made an area more suitable?<a href="carto-modelling.html#q5-what-features-made-an-area-more-suitable" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 </div>
 <div id="q6.-which-neighbourhood-had-an-income-suitability-of-zero" class="section level5 unnumbered hasAnchor">
-<h5>Q6. Which neighbourhood had an income suitability of zero?<a href="#q6.-which-neighbourhood-had-an-income-suitability-of-zero" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<h5>Q6. Which neighbourhood had an income suitability of zero?<a href="carto-modelling.html#q6.-which-neighbourhood-had-an-income-suitability-of-zero" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 </div>
 <div id="q7.-what-is-the-area-in-ha-with-two-decimal-places-of-all-spaces-that-have-a-suitability-of-greater-than-0.5" class="section level5 unnumbered hasAnchor">
-<h5>Q7. What is the area (in ha, with two decimal places) of all spaces that have a suitability of greater than 0.5?<a href="#q7.-what-is-the-area-in-ha-with-two-decimal-places-of-all-spaces-that-have-a-suitability-of-greater-than-0.5" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<h5>Q7. What is the area (in ha, with two decimal places) of all spaces that have a suitability of greater than 0.5?<a href="carto-modelling.html#q7.-what-is-the-area-in-ha-with-two-decimal-places-of-all-spaces-that-have-a-suitability-of-greater-than-0.5" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 </div>
 <div id="q8.-what-are-the-differences-between-suitability-and-capability-models" class="section level5 unnumbered hasAnchor">
-<h5>Q8. What are the differences between suitability and capability models?<a href="#q8.-what-are-the-differences-between-suitability-and-capability-models" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<h5>Q8. What are the differences between suitability and capability models?<a href="carto-modelling.html#q8.-what-are-the-differences-between-suitability-and-capability-models" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <hr />
 </div>
 </div>
 <div id="task-4-build-a-suitability-model" class="section level2 unnumbered hasAnchor">
-<h2>Task 4: Build a Suitability Model<a href="#task-4-build-a-suitability-model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2>Task 4: Build a Suitability Model<a href="carto-modelling.html#task-4-build-a-suitability-model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Models allow for easy replication of tasks. You will be building a model using the workflow in Task 3.</p>
 <p><strong>Step 1:</strong> Prepare model building.</p>
 <p>Open the Catalog Pane, and right-click the folder you have been saving things into. Select New&gt;Toolbox. Name the toolbox “Suitability”. Then, right-click the Toolbox and Select New&gt;Model.</p>
@@ -299,17 +344,17 @@ U100). Additionally, select only those land uses that are greater than 0.1 ha in
 <p>For more help with ModelBuilder, use ArcGIS Help (Project &gt; Help &gt; ModelBuilder (in the search)).</p>
 <p><a href="https://pro.arcgis.com/en/pro-app/latest/help/analysis/geoprocessing/modelbuilder/modelbuilderquick-tour.htm" class="uri">https://pro.arcgis.com/en/pro-app/latest/help/analysis/geoprocessing/modelbuilder/modelbuilderquick-tour.htm</a></p>
 <p>Your model should look similar to the one below.</p>
-<p><img src="images/03-model.PNG" width="75%" /></p>
+<p><img src="images/03-model.png" width="75%" /></p>
 <div id="q9.-why-are-models-like-this-one-valuable-when-would-you-use-this-kind-of-model" class="section level5 unnumbered hasAnchor">
-<h5>Q9. Why are models like this one valuable? When would you use this kind of model?<a href="#q9.-why-are-models-like-this-one-valuable-when-would-you-use-this-kind-of-model" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<h5>Q9. Why are models like this one valuable? When would you use this kind of model?<a href="carto-modelling.html#q9.-why-are-models-like-this-one-valuable-when-would-you-use-this-kind-of-model" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 </div>
 <div id="q10.-include-a-screenshot-of-your-model" class="section level5 unnumbered hasAnchor">
-<h5>Q10. Include a screenshot of your model<a href="#q10.-include-a-screenshot-of-your-model" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<h5>Q10. Include a screenshot of your model<a href="carto-modelling.html#q10.-include-a-screenshot-of-your-model" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <hr />
 </div>
 </div>
 <div id="task-4-create-and-export-a-map" class="section level2 unnumbered hasAnchor">
-<h2>Task 4: Create and export a map<a href="#task-4-create-and-export-a-map" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2>Task 4: Create and export a map<a href="carto-modelling.html#task-4-create-and-export-a-map" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Lastly, you will be making a map showing capability and suitability. Include your capability and suitability maps in the same layout. Include an inset of the area that is <em>most suitable</em> for a community garden.</p>
 <p>Be sure to use a proper colour ramp— quick examples of when to use which type of colour ramp can be found at the following website (<a href="https://carto.com/carto-colors/" class="uri">https://carto.com/carto-colors/</a>).</p>
 <p>What we expect to see:</p>
@@ -322,6 +367,9 @@ student name, coordinate system)</li>
 </ul>
 <p>To export the map, find “Layout” under the share tab. Select PDF as the file type, and use an appropriate resolution. Open your exported map and make sure that everything on the map is legible</p>
 <p><strong>Export your map to PDF and include it in you final report along with the other lab questions.</strong></p>
+
+<pre><code>## Warning in readLines(file, warn = readLines.warn): incomplete final line found
+## on &#39;chapterauthors.yml&#39;</code></pre>
 </div>
 </div>
             </section>
@@ -329,8 +377,8 @@ student name, coordinate system)</li>
           </div>
         </div>
       </div>
-
-
+<a href="GNSS-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="RS-imagery.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -373,7 +421,10 @@ gitbook.start({
 "text": null
 },
 "download": null,
-"search": false,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
@@ -381,6 +432,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
