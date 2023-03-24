@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Lab 1 Geovisualization using LiDAR | 05-lidar.knit</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Lab 1 Geovisualization using LiDAR | 05-lidar.knit" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Lab 1 Geovisualization using LiDAR | 05-lidar.knit" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">An Open Geomatics Community of Practice</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path=""><a href="#lidar"><i class="fa fa-check"></i><b>1</b> Geovisualization using LiDAR</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#lab-overview"><i class="fa fa-check"></i>Lab Overview</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#learning-objectives"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#deliverables"><i class="fa fa-check"></i>Deliverables</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#data"><i class="fa fa-check"></i>Data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path=""><a href="#task-1-load-and-explore-the-lidar-data"><i class="fa fa-check"></i>Task 1: Load and explore the LiDAR data</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#task-2-create-a-digital-terrain-model"><i class="fa fa-check"></i>Task 2: Create a Digital Terrain Model</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#task-3-create-a-digital-surface-model-dsm"><i class="fa fa-check"></i>Task 3: Create a Digital Surface Model (DSM)</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#task-4-create-a-map"><i class="fa fa-check"></i>Task 4: Create a map</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#task-4-exploring-a-scene"><i class="fa fa-check"></i>Task 4: Exploring a scene</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<!--bookdown:title:end-->
+<!--bookdown:title:start-->
+<div id="lidar" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Lab 1</span> Geovisualization using LiDAR<a href="#lidar" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Written by
+Paul Pickell</p>
+<div id="lab-overview" class="section level2 unnumbered hasAnchor">
+<h2>Lab Overview<a href="#lab-overview" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The aim of this lab is to use LiDAR data from the City of Vancouver to create a Digital Terrain Model (DTM) and a Digital Surface Model (DSM). We will then investigate how these methods compare to one another, and explore their strengths and weaknesses. Additionally, we will explore 3D visualization in ArcGIS Pro using Scenes.</p>
+<hr />
+<div id="learning-objectives" class="section level3 unnumbered hasAnchor">
+<h3>Learning Objectives<a href="#learning-objectives" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Work with lidar data</li>
+<li>Create a DTM and DSM from a lidar pointcloud</li>
+<li>Use ArcScene to visualize a pointcloud</li>
+</ul>
+<hr />
+</div>
+<div id="deliverables" class="section level3 unnumbered hasAnchor">
+<h3>Deliverables<a href="#deliverables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Answer all the questions given in the lab handout.</li>
+<li>A map of your DTM and DSM.</li>
+<li>Screenshots of your LiDAR visualizations.</li>
+</ul>
+<hr />
+</div>
+<div id="data" class="section level3 unnumbered hasAnchor">
+<h3>Data<a href="#data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We will be working with LiDAR data collected over the City of Vancouver. There are two files associated with this lab:</p>
+<ul>
+<li>Vancouver_lidar.las: The LiDAR data file. LAS is the standard file type for LiDAR data</li>
+<li>Vancouver_Ortho.tif: An orthophoto of our study area, which was collected at the same time as the LiDAR data</li>
+<li>Information on LiDAR collection and specifications: <a href="https://opendata.vancouver.ca/explore/dataset/lidar-2018/information/" class="uri">https://opendata.vancouver.ca/explore/dataset/lidar-2018/information/</a></li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="task-1-load-and-explore-the-lidar-data" class="section level2 unnumbered hasAnchor">
+<h2>Task 1: Load and explore the LiDAR data<a href="#task-1-load-and-explore-the-lidar-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Step 1:</strong> ArcGIS Pro has several tools that we can use to view and analyse LiDAR point clouds. In order to view the dataset, we need to import it as a LAS Dataset. On the analysis tab, click the tools button and type ‘Create LAS dataset’ in the search box. Specify your input file as all of the .las files in the LidarVan folder this lab. Name the output LAS Dataset Van_lidar.lasd and specify a coordinate system (hint: look in the specifications website). Check the ‘Compute Statistics box’. Surface Constraints can be left blank, and we want to make sure that ‘All LAS Files’ are selected for ‘Create PRJ For LAS Files’.</p>
+<p><img src="images/05-geo.PNG" width="30%" /></p>
+<div id="q1.-what-is-the-horizontal-datum-for-the-las-dataset" class="section level5 unnumbered hasAnchor">
+<h5>Q1. What is the horizontal datum for the las dataset?<a href="#q1.-what-is-the-horizontal-datum-for-the-las-dataset" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+</div>
+<div id="q2.-what-is-the-vertical-datum-for-the-las-dataset" class="section level5 unnumbered hasAnchor">
+<h5>Q2. What is the vertical datum for the las dataset?<a href="#q2.-what-is-the-vertical-datum-for-the-las-dataset" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p><strong>Step 2:</strong> We can now add our LAS Dataset to a Map document (insert New Map). Depending on the zoom extent, you may only see the red bounding box of the las file; this isn’t an error, you just need to zoom in to see the actual points. Alternatively, you can open the dataset in a ‘Global Scene’, although due to the size of the point cloud this might cause some lag. The default display is that no point cloud filters are applied; if you want to view only ground points, right click on the file, navigate to ‘LAS Filters’, and click ‘Ground’. If you want to investigate what the city looks like, you can add the Vancouver orthophoto.</p>
+<p><img src="images/05-filter.PNG" width="50%" />
+Figure 2: Viewing and filtering the dataset</p>
+<p>Another way to explore the dataset is to use the Catalog. Right click Van_lidar.lasd and click on Properties. Here we can see some statistics of the point clouds, such as information regarding the Classification Codes and Returns Number.</p>
+</div>
+<div id="q3.-what-is-the-average-point-spacing-of-the-dataset" class="section level5 unnumbered hasAnchor">
+<h5>Q3. What is the average point spacing of the dataset?<a href="#q3.-what-is-the-average-point-spacing-of-the-dataset" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+</div>
+<div id="q4.-what-percentage-of-points-are-classified-as-ground" class="section level5 unnumbered hasAnchor">
+<h5>Q4. What percentage of points are classified as ground?<a href="#q4.-what-percentage-of-points-are-classified-as-ground" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<hr />
+</div>
+</div>
+<div id="task-2-create-a-digital-terrain-model" class="section level2 unnumbered hasAnchor">
+<h2>Task 2: Create a Digital Terrain Model<a href="#task-2-create-a-digital-terrain-model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Step 1:</strong> Now that we are familiar with the dataset, we can create a DTM using the easy to use built-in functions. To do so, search for the ‘LAS Dataset to Raster’ tool, and use your LAS Dataset as the input. Since we are interested in creating a terrain model, we want to use the binning interpolation type, and make sure that we use the minimum (i.e. the lowest) points in each cell assignment. Sampling Value refers to the resolution of the raster that we are creating – we want our raster to be 10 m x 10 m. Name this raster <strong>‘VAN_DTM’</strong>.</p>
+<p><img src="images/05-las2.PNG" width="50%" /></p>
+<p>Figure 3: Converting the LAS Dataset to Raster</p>
+<div id="q5.-why-is-it-important-to-select-the-minimum-value-in-the-cell-assignment-selection-2-sentence-maximum" class="section level5 unnumbered hasAnchor">
+<h5>Q5. Why is it important to select the minimum value in the cell assignment selection? (2 sentence maximum)<a href="#q5.-why-is-it-important-to-select-the-minimum-value-in-the-cell-assignment-selection-2-sentence-maximum" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+</div>
+<div id="q6.-include-a-screenshot-of-your-dtm." class="section level5 unnumbered hasAnchor">
+<h5>Q6. Include a screenshot of your DTM.<a href="#q6.-include-a-screenshot-of-your-dtm." class="anchor-section" aria-label="Anchor link to header"></a></h5>
+</div>
+<div id="q7.-how-could-you-validate-your-dtm" class="section level5 unnumbered hasAnchor">
+<h5>Q7. How could you validate your DTM?<a href="#q7.-how-could-you-validate-your-dtm" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<hr />
+</div>
+</div>
+<div id="task-3-create-a-digital-surface-model-dsm" class="section level2 unnumbered hasAnchor">
+<h2>Task 3: Create a Digital Surface Model (DSM)<a href="#task-3-create-a-digital-surface-model-dsm" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Step 1:</strong> Right-click <strong>Van_lidar.lasd</strong> in the Contents pane and change the filter options to first returns.</p>
+<p><strong>Step 2:</strong> Right-click <strong>Van_lidar.lasd</strong> again and select Properties, then navigate to the LAS Filter tab on the left and uncheck “1 Unassigned” and “7 Low Noise” under Classification Codes. Press OK.</p>
+<p><strong>Step 3:</strong> Navigate back to the “LAS Dataset To Raster” tool.</p>
+<ul>
+<li><strong>Output Raster:</strong> VAN_DSM</li>
+<li><strong>Cell Assignment:</strong> Average</li>
+<li><strong>Sampling Value:</strong> 10</li>
+</ul>
+<p>Click Run and view your output in the map window (Figure 4).</p>
+<p><img src="images/05-ubc-lidar.PNG" width="50%" /></p>
+<p>Figure 4. Lidar derived DSM of UBC Vancouver Campus</p>
+<div id="q8.-include-a-screenshot-of-your-dsm." class="section level5 unnumbered hasAnchor">
+<h5>Q8. Include a screenshot of your DSM.<a href="#q8.-include-a-screenshot-of-your-dsm." class="anchor-section" aria-label="Anchor link to header"></a></h5>
+</div>
+<div id="q9.-what-is-the-range-of-values-in-your-dsm-what-units-are-these" class="section level5 unnumbered hasAnchor">
+<h5>Q9. What is the range of values in your dsm? What units are these?<a href="#q9.-what-is-the-range-of-values-in-your-dsm-what-units-are-these" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+</div>
+<div id="q10.-interpret-your-dsm-what-features-stand-out-what-features-are-obscured-by-the-pixel-size" class="section level5 unnumbered hasAnchor">
+<h5>Q10. Interpret your DSM What features stand out? What features are obscured by the pixel size?<a href="#q10.-interpret-your-dsm-what-features-stand-out-what-features-are-obscured-by-the-pixel-size" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+</div>
+<div id="q11.-explain-the-relationship-between-the-vertical-datum-elevation-and-height." class="section level5 unnumbered hasAnchor">
+<h5>Q11. Explain the relationship between the vertical datum, elevation, and height.<a href="#q11.-explain-the-relationship-between-the-vertical-datum-elevation-and-height." class="anchor-section" aria-label="Anchor link to header"></a></h5>
+</div>
+<div id="q12.-what-does-the-impact-of-cell-size-have-on-the-surfaces-that-you-created-if-you-had-to-redo-the-lab-would-you-choose-a-different-resolution" class="section level5 unnumbered hasAnchor">
+<h5>Q12. What does the impact of cell size have on the surfaces that you created? If you had to redo the lab, would you choose a different resolution?<a href="#q12.-what-does-the-impact-of-cell-size-have-on-the-surfaces-that-you-created-if-you-had-to-redo-the-lab-would-you-choose-a-different-resolution" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<hr />
+</div>
+</div>
+<div id="task-4-create-a-map" class="section level2 unnumbered hasAnchor">
+<h2>Task 4: Create a map<a href="#task-4-create-a-map" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Step 1:</strong> Switch ArcGIS Pro to Layout view. You may change the page orientation to landscape instead of portrait if you would like. To do so, go to File -&gt; Page and Print Setup, and change the orientation to landscape.</p>
+<p><strong>Step 2:</strong> In ArcGIS Pro, we can insert as many map frames as we want into our map layout. In our case, we will need 2 maps in our layout, as well as some free space for legends and text. There will be one DTM and one DSM. Display each of these layers in their own map and place them appropriately in the layout. Each map should include only one raster, one of the following: DTM and DSM.</p>
+<p><strong>Step 3:</strong> Change the symbology for both layers from the default to something more visually appealing. Follow the instructions below to ensure that you apply the same symbology to both layers. Start with the elevations. Click on one of the layers representing the interpolated surfaces and select the Symbology tab. Change the Primary symbology to ‘Classify’. Set the number of classes to 7. You may change the color ramp to one that makes sense to you, but make sure that there is enough contrast between classes. Change the symbology of the other surfaces to match the first one (i.e. make sure to match break classes). Add a legend for each symbology definition (Elevation) to the map layout by clicking on a data frame and selecting Insert -&gt; Legend from the top menu bar. Place them on the map layout in a way that makes sense (near the respective layers). Export the map to a PDF (Share -&gt; Export Layout).</p>
+<p><em>Include a PDF of your map in your final deliverables</em></p>
+<hr />
+</div>
+<div id="task-4-exploring-a-scene" class="section level2 unnumbered hasAnchor">
+<h2>Task 4: Exploring a scene<a href="#task-4-exploring-a-scene" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Step 1: The first thing that we will do is add a Local Scene (Insert New Map -&gt; New Local Scene). Add Vancouver_Ortho.tif to the scene. We can navigate through the scene using the mouse, or the on-screen navigator (Figure 6). You can learn more about navigation in ArcGIS Pro here: <a href="https://pro.arcgis.com/en/pro-app/latest/help/mapping/navigation/navigation-in-arcgis-pro.htm" class="uri">https://pro.arcgis.com/en/pro-app/latest/help/mapping/navigation/navigation-in-arcgis-pro.htm</a></p>
+<p><img src="images/05-nav.PNG" width="20%" /></p>
+<p>Take some time to play around and explore the scene. One thing we notice is that the imagery does not match the ‘ground’. This is because the ground in the scene is using the default global service, which has a resolution of between 10 and 30 meters. We need to create a custom ground surface to elevate the orthophoto.</p>
+<p><strong>Step 2:</strong> Create a higher resolution DSM. Filter the LAS dataset by first returns and toggle off returns classified as unassigned and noise as you did in Task 2. Using the ‘LAS Dataset to Raster’ tool, create a raster called ‘VAN_DSM2m’ with a resolution of 2 meters, binning the data by ‘Maximum’.</p>
+<p><strong>Step 3:</strong> In the Contents pane, right-click Ground, located below the Elevation Surfaces group layer. Click ‘Add Elevation Source’. Browse to the location of VAN_DSM2m and select it. You can now start to see how the surface features have been incorporated into the surface. Make sure to zoom in to look at areas with high relief and roads. Look at some of the trees on Main Mall. Why might these trees look strange?</p>
+<p><strong>Step 4:</strong> Sometimes it is useful to exaggerate height differences to show a particular aspect of your dataset. To do this, click on ‘ground’ and navigate to the ‘Appearance’ tab (on the top bar). You can play around with the vertical exaggeration here and see how data is displayed differently. You might also be interested in changing the lighting of the scene in order to show what your data looks like at a certain time. Right click on ‘Scene’ and select ‘Properties’ (on the left side of the screen) to access illumination properties. This section is where you can experiment with the lighting of your scene (for example you can set a date and time).</p>
+<p><strong>Step 5:</strong> Export a scene of your choice. With a figure caption, describe what we are looking at, and whether you changed the vertical exaggeration or illumination in the scene (Figure 7).</p>
+<p><img src="images/05-scene.PNG" width="75%" /></p>
+<p>Figure 7: An example of a scene from UBC Campus.</p>
+<div id="q14.-export-a-screenshot-of-a-scene-of-you-choice-as-described-in-step-5-of-the-previous-section." class="section level5 unnumbered hasAnchor">
+<h5>Q14. Export a screenshot of a scene of you choice as described in step 5 of the previous section.<a href="#q14.-export-a-screenshot-of-a-scene-of-you-choice-as-described-in-step-5-of-the-previous-section." class="anchor-section" aria-label="Anchor link to header"></a></h5>
+</div>
+<div id="q15.-what-is-happening-at-the-edge-of-the-buildings-in-the-3d-orthophoto-what-might-be-causing-this" class="section level5 unnumbered hasAnchor">
+<h5>Q15. What is happening at the edge of the buildings in the 3d orthophoto? What might be causing this?<a href="#q15.-what-is-happening-at-the-edge-of-the-buildings-in-the-3d-orthophoto-what-might-be-causing-this" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": false,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

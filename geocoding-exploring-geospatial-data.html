@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Lab 1 Geocoding and Exploring Geospatial Data | 01-geocoding-exploring-geospatial-data.knit</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Lab 1 Geocoding and Exploring Geospatial Data | 01-geocoding-exploring-geospatial-data.knit" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Lab 1 Geocoding and Exploring Geospatial Data | 01-geocoding-exploring-geospatial-data.knit" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">An Open Geomatics Community of Practice</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path=""><a href="#geocoding-exploring-geospatial-data"><i class="fa fa-check"></i><b>1</b> Geocoding and Exploring Geospatial Data</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#lab-overview"><i class="fa fa-check"></i>Lab Overview</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#competencies-in-this-lab"><i class="fa fa-check"></i>Competencies in This Lab</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#deliverables"><i class="fa fa-check"></i>Deliverables</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#data"><i class="fa fa-check"></i>Data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path=""><a href="#task-1-download-and-prepare-data"><i class="fa fa-check"></i>Task 1: Download and Prepare Data</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#task-2-prepare-data"><i class="fa fa-check"></i>Task 2: Prepare Data</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#task-3-geocoding-a-table-of-addresses"><i class="fa fa-check"></i>Task 3: Geocoding a Table of Addresses</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#task-4-create-a-shapefile-from-csv-data"><i class="fa fa-check"></i>Task 4: Create a Shapefile from CSV data</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#task-5-create-an-urban-map"><i class="fa fa-check"></i>Task 5: Create an Urban Map</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<!--bookdown:title:end-->
+<!--bookdown:title:start-->
+<div id="geocoding-exploring-geospatial-data" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Lab 1</span> Geocoding and Exploring Geospatial Data<a href="#geocoding-exploring-geospatial-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Written by</p>
+<p>Paul Pickell</p>
+<div id="lab-overview" class="section level2 unnumbered hasAnchor">
+<h2>Lab Overview<a href="#lab-overview" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Working with and manipulating your own geospatial data is essential for many geomatics tasks. Often in urban forestry, you will come across datasets with addresses or coordinates. In this lab, you will learn how to import a CSV into ArcGIS Pro, and how to create an address locator and geocode addresses. You will work from data within Vancouver to create several new geospatial datasets and practice geocoding addresses.</p>
+<hr />
+<div id="competencies-in-this-lab" class="section level3 unnumbered hasAnchor">
+<h3>Competencies in This Lab<a href="#competencies-in-this-lab" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Query and extract geospatial data from an online portal</li>
+<li>Build a custom address locator using geospatial data</li>
+<li>Geocode addresses and assess quality</li>
+</ul>
+<hr />
+</div>
+<div id="deliverables" class="section level3 unnumbered hasAnchor">
+<h3>Deliverables<a href="#deliverables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You will be submitting the following:</p>
+<ul>
+<li>Answers to any questions posed in the lab handout submitted through Canvas.</li>
+<li>A pdf map complete with all necessary elements (scale, compass, legend, etc.)</li>
+</ul>
+<hr />
+</div>
+<div id="data" class="section level3 unnumbered hasAnchor">
+<h3>Data<a href="#data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You will be downloading some of your data from the <a href="https://opendata.vancouver.ca/pages/home/">City of Vancouver Open Data Portal</a>.</p>
+<p><img src="images/01-cov-data-portal.png" width="75%" /></p>
+<p>The data package on Canvas contains Greater Vancouver Regional District (GVRD) Roads shapefile and parktrees.csv. The CSV file was received from the City of Vancouver Board of Parks and Recreation and represents trees in parks of Vancouver.</p>
+<hr />
+</div>
+</div>
+<div id="task-1-download-and-prepare-data" class="section level2 unnumbered hasAnchor">
+<h2>Task 1: Download and Prepare Data<a href="#task-1-download-and-prepare-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Step 1:</strong> The first dataset you will download is “street trees” data. Search for it with the search bar, then click the link for the dataset. You are going to want to export the data as a shapefile; click on the Export tab and look over the geographic file formats. You will notice that the download button for Shapefile is greyed out because there are too many records in the dataset. Keep the webpage open so you have access to the Metadata.</p>
+<div id="q1.-what-is-the-maximum-number-of-records-you-can-export-from-the-city-of-vancouver-open-data-portal-as-a-shapefile" class="section level5 unnumbered hasAnchor">
+<h5>Q1. What is the maximum number of records you can export from the city of vancouver open data portal as a shapefile?<a href="#q1.-what-is-the-maximum-number-of-records-you-can-export-from-the-city-of-vancouver-open-data-portal-as-a-shapefile" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p><strong>Step 2:</strong> Instead of working with the entirety of the dataset, you will focus on one neighbourhood. To the left, there are filtering options. Scroll down to NEIGHBOURHOOD_NAME and choose the neighborhood with the highest number of trees. Now you should have the option to download street tree data.</p>
+<p><strong>Step 3:</strong> The second dataset you will download is public parks. There should be a point and a polygon dataset. Make sure you download the polygon dataset.</p>
+<hr />
+</div>
+</div>
+<div id="task-2-prepare-data" class="section level2 unnumbered hasAnchor">
+<h2>Task 2: Prepare Data<a href="#task-2-prepare-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this task, you will export a filtered table from a shapefile, and then you will add a field so the table can be used in the next task.</p>
+<p><strong>Step 1:</strong> Open up the metadata for the street trees file. It should be under the “Information” tab on the data website. Look through the metadata and make yourself familiar with what each column means. For example, one column designates when a tree was planted.</p>
+<div id="q2.-what-is-the-name-of-the-column-that-designates-when-a-tree-was-planted" class="section level5 unnumbered hasAnchor">
+<h5>Q2. What is the name of the column that designates when a tree was planted?<a href="#q2.-what-is-the-name-of-the-column-that-designates-when-a-tree-was-planted" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Sometimes, “lots” in cities are exceptionally large or are adjacent to more than one street. Because these lots only have one “true” address, urban foresters may make up addresses to designate more specific areas. Find the name of the column that designates whether or not the address for a tree was made up to associate the tree with a nearby lot. You are going to export just the data for trees that are assigned “Yes” in this column.</p>
+<p><strong>Step 2:</strong> Right-click street-trees and select “Export Features.”</p>
+<ul>
+<li><strong>Input Rows:</strong> street-trees</li>
+<li><strong>Output Location:</strong> Where you want the table to be saved</li>
+<li><strong>Output Name:</strong> AssignedTrees</li>
+<li><strong>Expression:</strong> + New expression</li>
+</ul>
+<p>Where <code>Assigned</code> is equal to Y.</p>
+<p><strong>Step 3:</strong> Open the attribute table for <strong>AssignedTrees</strong> and add a new text field to the data. On the top of the attribute table, there is a button that says “Add”. The table will switch to field view. Name the field “Address” and select “Text” as the data type. Click “Save” in the top bar. Close “Field View” and return to the attribute table. Your new field should appear as the very last column in the dataset. Right-click the field and select “Calculate Field.”</p>
+<p>The address locator you create in Task 3 requires addresses to be written in a specific way—street numbers and names must be in the same column. You will need to specify to ArcGIS that you are combining two strings (another designation for text data). Within the Fields menu under “Expression,” double-click civic_numb. You will notice that the field below the equal sign is now populated with <code>!civic_numb!</code>.</p>
+<p>To combine the two columns together, type the following code into the box: <code>str(!civic_numb!)+" "+str(!std_street!)</code></p>
+<p><img src="images/01-calculate-field.png" width="50%" /></p>
+<p>Click “Apply”. The Address field should now have street numbers and street names.</p>
+<hr />
+</div>
+</div>
+<div id="task-3-geocoding-a-table-of-addresses" class="section level2 unnumbered hasAnchor">
+<h2>Task 3: Geocoding a Table of Addresses<a href="#task-3-geocoding-a-table-of-addresses" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Many localities label their trees by address rather than by coordinates. In the street-trees file, all of the trees have addresses and coordinates. However, the trees with a value of “Y” for “Assigned” have addresses that were effectively made up for ease of finding the trees again. In this section of the lab, you will use the <strong>GVRD_roads</strong> file to create an address locator for Vancouver. Then you will geocode the addresses from <strong>AssignedTrees</strong> to examine the differences between collecting data with addresses versus coordinates. An address locator allows you to look up addresses either manually or by uploading a table of addresses. This is helpful when you are searching for specific trees!</p>
+<p><strong>Step 1:</strong> Create an address locator, which is located in Analysis &gt; Tools &gt; Toolboxes &gt; Geocoding Tools &gt; Create Locator. You can also use the search bar to search for the tool by name.</p>
+<p>For the tool’s parameters:</p>
+<ul>
+<li><strong>Country or Region:</strong> Canada</li>
+<li><strong>Primary Table(s):</strong> GVRD_roads</li>
+<li><strong>Role:</strong> Street Address</li>
+<li><strong>Field Map:</strong>
+<ul>
+<li><strong>Feature ID:</strong> OBJECTID</li>
+<li><strong>Left House Number From:</strong> FROM_LEFT_HOUSE_NUMBER</li>
+<li><strong>Left House Number To:</strong> TO_LEFT_HOUSE_NUMBER</li>
+<li><strong>Right House Number From:</strong> FROM_RIGHT_HOUSE_NUMBER</li>
+<li><strong>Right House Number To:</strong> TO_RIGHT_HOUSE_NUMBER</li>
+<li><strong>Street Name:</strong> STRUCTURED_NAME_1</li>
+<li><strong>Left City/Municipality:</strong> LEFT_LOC_1</li>
+<li><strong>Right City/Municipality:</strong> RIGHT_LOC_1</li>
+</ul></li>
+<li>All other fields leave as <code>&lt;NONE&gt;</code></li>
+<li>Language Code: English</li>
+</ul>
+<p>Save the file as <strong>GVRDaddresses</strong>.</p>
+<p><strong>Step 2:</strong> Select Locate underneath the Map tab, and then click on Address Inspector. Use your newly created address locator to click around Vancouver. You may need to double-click on your map in order to force the pop-up to stay visible and docked as a tab (see right pane below).</p>
+<p><img src="images/01-address-inspector.png" width="75%" /></p>
+<p>Choose GVRDaddresses in the dropdown.</p>
+<p>You can also use the Locate tool to Search an address using the ArcGISWorld Geocoding Service. Type in the address of Queen Elizabeth Park (4600 Cambie St, Vancouver) and notice the map highlights near the park! The ArcGIS World Geocoding Service will consume credits through your ArcGIS account, so it is not the most cost-effective way to geocode many addresses.</p>
+<p><img src="images/01-locate.png" width="50%" /></p>
+<p><strong>Step 3:</strong> Geocode a table of addresses using GVRDaddresses. The table of addresses you will be geocoding is the AssignedTrees dataset. To access the geocoding tool, you can search for Geocode Addresses.</p>
+<p>Below are the tool’s parameters:</p>
+<ul>
+<li><strong>Input Table:</strong> AssignedTrees</li>
+<li><strong>Input Address Locator:</strong> GVRDaddresses</li>
+<li><strong>Input Address Fields:</strong> Single Field</li>
+<li><strong>Field Name:</strong> Full Address</li>
+<li><strong>Alias Name:</strong> Address</li>
+</ul>
+<p>Save the file as <strong>geocoded</strong>.</p>
+<p><strong>Step 4:</strong> Look at the attribute table. The score column shows from 0-100 based on how close the address in the address locator was able to match the input table. The mailbox icon with the arrows in the geocoding toolbar allows you to investigate the matches more in-depth. With a messier dataset, this becomes invaluable.</p>
+<div id="q3.-are-all-of-the-addresses-a-100-match-why-or-why-not" class="section level5 unnumbered hasAnchor">
+<h5>Q3. Are all of the addresses a 100% match? why or why not?<a href="#q3.-are-all-of-the-addresses-a-100-match-why-or-why-not" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p><strong>Step 5:</strong> Toggle the <strong>AssignedTrees</strong> and <strong>geocoded</strong> datasets on and off to look for similarities and differences.</p>
+</div>
+<div id="q4.-how-do-they-visually-compare-to-each-other-use-specific-examples-in-your-explanation-and-make-inferences-about-why-you-are-seeing-differencessimilarities." class="section level5 unnumbered hasAnchor">
+<h5>Q4. How do they visually compare to each other? Use specific examples in your explanation and make inferences about why you are seeing differences/similarities.<a href="#q4.-how-do-they-visually-compare-to-each-other-use-specific-examples-in-your-explanation-and-make-inferences-about-why-you-are-seeing-differencessimilarities." class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<hr />
+</div>
+</div>
+<div id="task-4-create-a-shapefile-from-csv-data" class="section level2 unnumbered hasAnchor">
+<h2>Task 4: Create a Shapefile from CSV data<a href="#task-4-create-a-shapefile-from-csv-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Oftentimes, you will encounter geospatial data in CSV format. Although each value in the dataset has a location, the dataset has not been provided as shapefiles. In this portion of the lab, you will practice converting CSVs into shapefiles. Then, you will work with the shapefiles you have created.</p>
+<p><strong>Step 1:</strong> Open the <strong>parktrees.csv</strong> file in Excel. There should be 6 columns and several rows. Each row represents a tree in a Vancouver Park.</p>
+<div id="q5.-how-many-trees-are-represented-in-this-file" class="section level5 unnumbered hasAnchor">
+<h5>Q5. How many trees are represented in this file?<a href="#q5.-how-many-trees-are-represented-in-this-file" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+</div>
+<div id="q6.-look-at-the-columns-with-the-coordinates.-which-units-are-the-coordinates-likely-in" class="section level5 unnumbered hasAnchor">
+<h5>Q6. Look at the columns with the coordinates. Which units are the coordinates likely in?<a href="#q6.-look-at-the-columns-with-the-coordinates.-which-units-are-the-coordinates-likely-in" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p><strong>Step 2:</strong> Exit Excel and bring up ArcGIS Pro, where you will be adding the data to your map. Look at the data in the Catalog.</p>
+</div>
+<div id="q7.-does-arcgis-pro-consider-this-data-to-be-spatial" class="section level5 unnumbered hasAnchor">
+<h5>Q7. Does arcgis pro consider this data to be spatial?<a href="#q7.-does-arcgis-pro-consider-this-data-to-be-spatial" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p><strong>Step 3:</strong> Go to Map &gt; Add Data &gt; XY Point Data, and select <strong>parktrees.csv</strong>. Choose the appropriate column names for the X and Y fields. Leave the Z field blank. This is very important, if you choose the wrong columns the points will be nowhere near Vancouver!</p>
+</div>
+<div id="q8.-what-does-the-z-field-represent" class="section level5 unnumbered hasAnchor">
+<h5>Q8. What does the z field represent?<a href="#q8.-what-does-the-z-field-represent" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+</div>
+<div id="q9.-which-column-did-you-choose-for-x-which-column-for-y" class="section level5 unnumbered hasAnchor">
+<h5>Q9. Which column did you choose for x, which column for y?<a href="#q9.-which-column-did-you-choose-for-x-which-column-for-y" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Specify the coordinate system by clicking on the Globe icon to the right-hand side of Coordinate System and locating NAD 1983 UTM Zone 10 under Projected Coordinate System &gt; UTM &gt; NAD 1983. You have now created an “Event Layer.” Export the Events layer as a shapefile (right-click the layer &gt; Data &gt; Export Features). Save it in your output folder as <strong>parktrees</strong>. Add <strong>parktrees</strong> to your display.</p>
+<p>Event layers are temporary layers, and without Object-ID fields they are not editable or selectable.</p>
+<p><strong>Step 4:</strong> View <strong>parktrees</strong> in ArcGIS Pro. The trees should all be in Vancouver. If they are not, something was input incorrectly and you will have to repeat Step 2. Once the tree points are properly mapped, change the symbology. Right-click <strong>parktrees</strong> in the Contents Pane and choose “Symbology.” A Symbology pop-up should appear. Click the symbol—and choose “Circle 3” from Gallery. Click the Properties Tab. Make the symbol smaller and change its colour.</p>
+<p>Add <strong>parks_polygon_representation</strong> and a satellite basemap to your map (Map &gt; Basemap &gt; Imagery). In the Contents Pane, drag the basemap to the bottom so that it does not cover anything. Symbolize <strong>parks_polygon_representation</strong> so that you can clearly the basemap for each park. You can do this in the Contents Pane by right-clicking the coloured rectangle beneath <strong>parks_polygon_representation</strong> and choosing “Color Properties…” at the bottom. Adjust the colours and transparency as you see fit.</p>
+</div>
+<div id="q10.-what-sort-of-discrepancies-do-you-see-between-the-number-of-trees-in-the-satellite-image-versus-the-number-of-trees-shown-in-the-dataset-do-any-specific-parks-stand-out-why-might-this-be-the-case" class="section level5 unnumbered hasAnchor">
+<h5>Q10. What sort of discrepancies do you see between the number of trees in the satellite image versus the number of trees shown in the dataset? Do any specific parks stand out? Why might this be the case?<a href="#q10.-what-sort-of-discrepancies-do-you-see-between-the-number-of-trees-in-the-satellite-image-versus-the-number-of-trees-shown-in-the-dataset-do-any-specific-parks-stand-out-why-might-this-be-the-case" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p><strong>Step 5:</strong> Now that all of the park trees are input, we will investigate tree density per park to get an idea about which parks in Vancouver have the highest tree density and which have the lowest. To answer this question, you will need to know the area of each park and the number of trees within them. Park area and name are in the <strong>parks_polygon_representation</strong> layer, but not in the <strong>parktrees</strong> shapefile. This information can be added to <strong>parktrees</strong> through a spatial join.</p>
+<p>Right-click <strong>parktrees</strong>, mouse down to Joins and Relates &gt; Spatial Join:</p>
+<ul>
+<li><strong>Target Features:</strong> parktrees</li>
+<li><strong>Join Features:</strong> parks_polygon_representation</li>
+<li><strong>Output Feature Class:</strong> parks_numtrees</li>
+<li><strong>Join Operation:</strong> Join one to one</li>
+<li><strong>Match Option:</strong> Intersect</li>
+</ul>
+<p>Expand the Fields option and remove all of the output fields except for <code>area_ha</code>, <code>park_id</code>, <code>park_name</code>, and <code>park_url</code>. Click “OK”.</p>
+<p>You should now have a park file with the number of trees (represented by JOIN_COUNT), along with the other park information.</p>
+<p>Add a new field called “treedensity”. Be sure to select the correct data type–the data in this field will be continuous values and include decimals. Tree density is the ratio of trees to park area. We will do this calculation only for parks greater than or equal to one acre in size.</p>
+<p>Using “Select By Attributes,” select all of the parks with an area greater than or equal to 1 ha. Then, use calculate field to get the tree density for each selected park.</p>
+</div>
+<div id="q11.-how-many-parks-in-vancouver-are-greater-than-1-ha-in-size" class="section level5 unnumbered hasAnchor">
+<h5>Q11. How many parks in vancouver are greater than 1 ha in size?<a href="#q11.-how-many-parks-in-vancouver-are-greater-than-1-ha-in-size" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+</div>
+<div id="q12.-from-the-selected-data-which-park-has-the-highest-tree-density" class="section level5 unnumbered hasAnchor">
+<h5>Q12. From the selected data, which park has the highest tree density?<a href="#q12.-from-the-selected-data-which-park-has-the-highest-tree-density" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Change the symbology of <strong>parks_numtrees</strong> from single symbol to unclassed colors displaying the tree density field.</p>
+<hr />
+</div>
+</div>
+<div id="task-5-create-an-urban-map" class="section level2 unnumbered hasAnchor">
+<h2>Task 5: Create an Urban Map<a href="#task-5-create-an-urban-map" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Finally, all of the components of this lab will be brought together with a map. The map should be 11”x17”, either landscape or portrait.</p>
+<p>The map will be of the neighbourhood for which you downloaded street tree data for. Zoom to that neighborhood.</p>
+<p>Requirements:</p>
+<ul>
+<li>Parks symbolized by tree density</li>
+<li>Coordinate-created points and address-created points (symbolized differently from each other!)</li>
+<li>Roads symbolized - Necessary map components (title, legend, scale bar, north arrow, student name and number, coordinate system)</li>
+</ul>
+<p>Export your map to PDF and upload it to Canvas along with the other lab questions.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": false,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

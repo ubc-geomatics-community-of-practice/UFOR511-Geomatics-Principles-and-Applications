@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Lab 1 Cartographic Modelling | 03-carto-modelling.knit</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Lab 1 Cartographic Modelling | 03-carto-modelling.knit" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Lab 1 Cartographic Modelling | 03-carto-modelling.knit" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">An Open Geomatics Community of Practice</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path=""><a href="#carto-modelling"><i class="fa fa-check"></i><b>1</b> Cartographic Modelling</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#lab-overview"><i class="fa fa-check"></i>Lab Overview</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#learning-objectives"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#deliverables"><i class="fa fa-check"></i>Deliverables</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path=""><a href="#task-1-download-and-prepare-data"><i class="fa fa-check"></i>Task 1: Download and prepare data</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#task-2-capability"><i class="fa fa-check"></i>Task 2: Capability</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#task-3-suitability"><i class="fa fa-check"></i>Task 3: Suitability</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#task-4-build-a-suitability-model"><i class="fa fa-check"></i>Task 4: Build a Suitability Model</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#task-4-create-and-export-a-map"><i class="fa fa-check"></i>Task 4: Create and export a map</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<!--bookdown:title:end-->
+<!--bookdown:title:start-->
+<div id="carto-modelling" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Lab 1</span> Cartographic Modelling<a href="#carto-modelling" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Written by</p>
+<p>Paul Pickell</p>
+<div id="lab-overview" class="section level2 unnumbered hasAnchor">
+<h2>Lab Overview<a href="#lab-overview" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In geomatics, you will often need to answer questions related to how well situated an object is dependent on its surroundings. In urban forestry for example, you might look at the ability for a tree to thrive given (a) soil characteristics, (b) how far the tree is from pollutant-heavy roadways, and (c) the number of tree vandalism crimes in the neighborhood. With data from several tree planting sites, these overlay and proximity factors can be combined using models to complete capability and suitability analyses.</p>
+<p>For this lab, you are using overlay and proximity tools to determine where in the City of Vancouver would be suitable for a new community garden.</p>
+<hr />
+<div id="learning-objectives" class="section level3 unnumbered hasAnchor">
+<h3>Learning Objectives<a href="#learning-objectives" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Download and merge census data with a spatial data</li>
+<li>Use model builder to automate geospatial tools</li>
+<li>Create professional maps following cartographic standards</li>
+</ul>
+<hr />
+</div>
+<div id="deliverables" class="section level3 unnumbered hasAnchor">
+<h3>Deliverables<a href="#deliverables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Answers to any questions posed in the lab handout</li>
+<li>Your suitability toolbox</li>
+<li>A pdf map complete with all necessary elements (scale, compass, legend, etc.)</li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="task-1-download-and-prepare-data" class="section level2 unnumbered hasAnchor">
+<h2>Task 1: Download and prepare data<a href="#task-1-download-and-prepare-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Step 1:</strong> Download data.</p>
+<p>You will be downloading most of your data from the City of Vancouver Open Data Portal (CoV; <a href="https://opendata.vancouver.ca/pages/home/" class="uri">https://opendata.vancouver.ca/pages/home/</a>).</p>
+<p>The datasets you will need are:</p>
+<ul>
+<li>Community Gardens and Food Trees (shapefile)</li>
+<li>Local Area Boundary (shapefile)</li>
+<li>Census Local Area Profiles 2016(xls)</li>
+</ul>
+<p>The final dataset (Landuse 2016) can be found on GitHub. This shapefile was downloaded from Metro Vancouver’s Open Data Catalogue; however, at least two of the polygons had errors and needed to be edited for the analysis to work properly.</p>
+<p>Download all of the lab data and put it somewhere that you can find it again.</p>
+<p><strong>Step 2:</strong> Pre-process census data.</p>
+<p>Census data requires pre-processing before loading it into ArcGIS. The census data you downloaded was custom-ordered from the City of Vancouver and is delineated by Vancouver’s 22 planning districts. Open “Census Local Area Profiles 2016” in Excel. There is <strong>a lot</strong> of information in this file, and you’re encouraged to scroll through it (and/or its metadata).</p>
+<p>The first four rows in the workbook are descriptive information and need to be removed before analysis; select and delete them. Now the first row should have planning district names. The values in the second row (ID 1) represent the approximate population value in each planning district.</p>
+<p>Now you need to filter the data to only keep “Total - Age groups and average age of the population -100% data” and “Median total income of households in 2015 ($)”. Select the “Variable” column (Click on the B above the cell that reads “Variable”). Then select “Data” in the top ribbon &gt; Filter. The cell should now have an arrow representing a dropdown menu. Within the dropdown, click Text Filters &gt; Equals.</p>
+<p>Show rows where Variable:</p>
+<ul>
+<li><strong>equals</strong> “Total - Age groups and average age of the population - 100% data”</li>
+<li><strong>OR</strong></li>
+<li><strong>equals</strong> “Median total income of households in 2015 ($)”</li>
+</ul>
+<p>Click OK.</p>
+<p>Be sure to either type the variable names EXACTLY as they appear, or select them from the dropdown menu in the Custom Autofilter window (the variables are alphabetized but there are <em>many</em> of them).</p>
+<p>You should have only two rows of data, with IDs 1 and 3964. Copy the data and column names, create a new sheet, then Paste Special them transposed into the new sheet. The transpose option is underlined in red within the image below.</p>
+<p><img src="images/03-menu.PNG" width="40%" /></p>
+<p>Remove the ID row and both of the rows that start with “Vancouver.” The current column names are too long, have spaces, and contain special characters. These features would all cause issues in ArcGIS Pro. Additionally, two of the three column names are not meaningful to your current dataset. Rename your columns:</p>
+<ul>
+<li>“Variable” -&gt; <strong>Plan_Dist</strong></li>
+<li>“Total - Age groups and average age of the population - 100% data” -&gt; <strong>Population</strong></li>
+<li>“Median total income of households in 2015 ($)” -&gt; <strong>Med_Hou_Inc</strong></li>
+</ul>
+<p>Lastly, add/remove spaces from the Planning District names in the excel sheet so they match the names in local-area-boundary.shp. The census data contains a space after most of the planning district names, and local-area-boundary.shp does not. Remove the extra spaces after the Planning District names in excel—all but Victoria-Fraserview have a space at the end. You can do this manually, or by using the equation below. A2 is the Planning District Name, and the -1 represents removing the last character from the string (in this case, a space). You should not use this equation for Victoria-Fraserview.</p>
+<p><code>=LEFT(A2, LEN(A2)-1)</code></p>
+<p>Save the sheet as <strong>census.csv</strong></p>
+<p><strong>Step 3:</strong> Join the census data with a shapefile.</p>
+<p>Now you are going to view the census data spatially by joining the local area boundary shapefile with the census csv. Open ArcGIS Pro, and add local-area-boundary.shp. Right-click the shapefile in Contents &gt; Joins and Relates.. &gt; Add Join.</p>
+<p>For the tool:</p>
+<ul>
+<li><strong>Input Table:</strong> Local Area Boundary</li>
+<li><strong>Input Join Field:</strong> name</li>
+<li><strong>Join Table:</strong> census.csv</li>
+<li><strong>Join Table Field:</strong> Plan_Dist</li>
+</ul>
+<p>Click OK.</p>
+<p>Open the attribute table of local-area-boundary.shp to verify that the join succeeded. If the join did not succeed, it is likely because the cells in census.csv did not exactly match those in local-area-boundary.shp. Double-check that the spacing is the same for both datasets.</p>
+<p>To redo the join, right-click the shapefile in Contents &gt; Joins and Relates.. &gt; Remove All Joins. Then repeat Step 3.</p>
+<div id="q1.-which-neighborhood-has-the-highest-median-income" class="section level5 unnumbered hasAnchor">
+<h5>Q1. Which neighborhood has the highest median income?<a href="#q1.-which-neighborhood-has-the-highest-median-income" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+</div>
+<div id="q2.-if-you-were-to-have-to-calculate-population-density-how-would-you-accomplish-this" class="section level5 unnumbered hasAnchor">
+<h5>Q2. If you were to have to calculate population density, how would you accomplish this?<a href="#q2.-if-you-were-to-have-to-calculate-population-density-how-would-you-accomplish-this" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<hr />
+</div>
+</div>
+<div id="task-2-capability" class="section level2 unnumbered hasAnchor">
+<h2>Task 2: Capability<a href="#task-2-capability" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Step 1:</strong> Identify locations in Vancouver that are capable of having a new community garden.</p>
+<p>Add <strong>Landuse2016.shp</strong> to your map and look at its metadata in Catalog View (View &gt; Catalog View). Here you will see information about the dataset, including what each LU_code means.</p>
+<p>Calculate the area in ha of each polygon using “Calculate Geometry”. When creating new field names, remember that you cannot use spaces or special characters such as parentheses. Keep column names simple. Use “Select By Attributes” (either in the Map Tab of the top ribbon, or at the top of the attribute table) to select the two land uses that have the capability to be used as potential community garden spaces (R100 &amp;
+U100). Additionally, select only those land uses that are greater than 0.1 ha in size.</p>
+<p>For the tool:</p>
+<ul>
+<li><strong>Input Rows:</strong> Landuse2016</li>
+<li><strong>Selection Type:</strong> New selection</li>
+<li><strong>+New Expression: Where</strong> LU_code is equal to R100</li>
+<li><strong>+Add Clause</strong> And areaha is greater than 0.</li>
+<li><strong>+Add Clause</strong> Or LU_Code is equal to U100</li>
+<li><strong>+Add Clause</strong> And areaha is greater than 0.1</li>
+</ul>
+<p>Click OK.</p>
+<p>With these selected, you are going to run the “Identity” tool. For the tool:</p>
+<ul>
+<li><strong>Input Features:</strong> local-area-boundary</li>
+<li><strong>Identity Features:</strong> Landuse2016</li>
+<li><strong>Output Feature Class:</strong> Van_Capable</li>
+<li><strong>Attributes To Join:</strong> All attributes</li>
+</ul>
+<p>Click OK.</p>
+<p>Your result will have the same extent as <strong>local-area-boundary.shp</strong>, and will have polygons for each neighborhood and each capable location. There should be three unique values in LU_code: R100, U100, and no value (the cells should be blank). Change the symbology of resulting shapefile (by LU_code) and look at what you have; everything that has a blank LU_code is incapable.</p>
+<p>Create a new field (of Data Type Short) called capable, and populate it with the number 1 for capable areas and the number 0 for incapable areas. This can be done using Select By Attributes and Calculate Field (once the selected polygons are populated with 1, you can switch the selection and populate the others with 0).</p>
+<div id="q3.-what-were-the-capability-requirements-in-this-assignment" class="section level5 unnumbered hasAnchor">
+<h5>Q3. What were the capability requirements in this assignment?<a href="#q3.-what-were-the-capability-requirements-in-this-assignment" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p><strong>Step 2:</strong> Quantify the area that is capable.</p>
+<p>Some of the polygons in <strong>Landuse2016.shp</strong> were split by the identity tool, and others were merged. Recalculate the area in ha. Now, you will determine how much area is capable and how much is not. Open “Summary Statistics” by right-clicking the capable column in <strong>Van_Capable.</strong> For the tool:</p>
+<ul>
+<li><strong>Input Table:</strong> Van_Capable</li>
+<li><strong>Output Table:</strong> Cap_SumStats</li>
+<li><strong>Statistics Field(s)</strong></li>
+<li><strong>Field:</strong> Areaha</li>
+<li><strong>Statistic Type:</strong> Sum</li>
+<li><strong>Case field:</strong> capable</li>
+</ul>
+<p>Open <strong>Suit_SumStats</strong> and look at the resulting summary statistics.</p>
+</div>
+<div id="q4.-what-percentage-of-vancouvers-total-area-might-be-capable-of-having-a-new-community-garden" class="section level5 unnumbered hasAnchor">
+<h5>Q4. What percentage of vancouver’s total area might be capable of having a new community garden?<a href="#q4.-what-percentage-of-vancouvers-total-area-might-be-capable-of-having-a-new-community-garden" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<hr />
+</div>
+</div>
+<div id="task-3-suitability" class="section level2 unnumbered hasAnchor">
+<h2>Task 3: Suitability<a href="#task-3-suitability" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Now that we know the possibly <em>capable</em> areas, we are going to determine which of them are most <em>suitable.</em></p>
+<p><strong>Step 1:</strong> Determine which areas are close to existing food trees and community gardens.</p>
+<p>Add <strong>community-gardens-and-food-trees.shp</strong> to your map. Use the “Multiple Ring Buffer” Tool to identify areas which are very close (within 200 m), close (between 200 and 400 m), and somewhat close (between 400 and 600 m) from existing food trees are community gardens.</p>
+<p>For the tool:</p>
+<ul>
+<li><strong>Input Features:</strong> community-gardens-and-food-trees</li>
+<li><strong>Output Feature Class:</strong> garden_buffer</li>
+<li><strong>Distances:</strong> 200 <strong>+Add another</strong> 400 <strong>+Add another</strong> 600</li>
+<li><strong>Distance Unit:</strong> Meters</li>
+<li><strong>Buffer Distance Field Name:</strong> distance</li>
+<li><strong>Dissolve Option:</strong> Non-overlapping (rings)</li>
+</ul>
+<p>Click OK.</p>
+<p>Now you are going to run the “Identity” tool to add the buffer information to your capability dataset.</p>
+<p>For the tool:</p>
+<ul>
+<li><strong>Input Features:</strong> Van_Capable</li>
+<li><strong>Identity Features:</strong> garden_buffer</li>
+<li><strong>Output Feature Class:</strong> Van_Suit</li>
+<li><strong>Attributes To Join:</strong> All attributes</li>
+</ul>
+<p>Click OK.</p>
+<p><strong>Step 2:</strong> Assign suitability values to garden buffers and median household incomes.</p>
+<p>In Van_Suit.shp, create a new field (Data Type: Float) called gard_suit. Populate the fields with 0 for the closest buffer, 0.25 for the close buffer, and 0.75 for the somewhat close buffer.</p>
+<p>All of the polygons outside of the buffer now have the distance field populated with “0”. This is incorrect, as the distance is beyond 600. You can populate the 0’s with -1 if you would like, just to keep track of the represented distance. Select all of the rows with a distance beyond 600, and populate the gard_suit column with the value 1.</p>
+<p>Community garden building will be prioritized in low income areas. In <strong>Van_Suit.shp</strong>, create a new field (Data Type: Float) called inc_suit. You will populate this with income values normalized from 0-1, with 1 representing the most suitable and 0 representing the least suitable.</p>
+<p>To scale the income values, you will divide the income values by the maximum income value. However, this result causes higher income areas to have values closer to 1 and lower income areas to have values closer to 0. The result should then be subtracted from 1. The equation would look something like this:</p>
+<p><code>inc_suit = 1 – (med_hou_inc/max(med_hou_inc))</code></p>
+<p><strong>Step 3:</strong> Calculate suitability.</p>
+<p>Finally, the suitability and capability fields can be combined to determine overall suitability. Create one final field, named suitability (Type: Float). Suitability is determined by weighting each suitability metric – a metric that is more important is given a larger weight. The total weight must add to 1.</p>
+<p>For example, if distance to an existing community garden was deemed to be three times as important as median household income, distance to a community garden would be weighted 0.75 and income would have a weight of 0.25</p>
+<p>Each weight is then multiplied by its respective scaled value, and then the results are added. The entire suitability calculation must be multiplied by the capability values so that only capable areas are considered. For the above example, the equation would look like this:</p>
+<p><code>suitability = capability*(0.75*gard_suit + 0.25*inc_suit)</code></p>
+<p>For this exercise, distance from a garden will be weighted the same as median household income. Calculate suitability, with the weight for distance from a garden set to 0.5 and the weight for median household income set to 0.5.</p>
+<div id="q5-what-features-made-an-area-more-suitable" class="section level5 unnumbered hasAnchor">
+<h5>Q5: What features made an area more suitable?<a href="#q5-what-features-made-an-area-more-suitable" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+</div>
+<div id="q6.-which-neighbourhood-had-an-income-suitability-of-zero" class="section level5 unnumbered hasAnchor">
+<h5>Q6. Which neighbourhood had an income suitability of zero?<a href="#q6.-which-neighbourhood-had-an-income-suitability-of-zero" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+</div>
+<div id="q7.-what-is-the-area-in-ha-with-two-decimal-places-of-all-spaces-that-have-a-suitability-of-greater-than-0.5" class="section level5 unnumbered hasAnchor">
+<h5>Q7. What is the area (in ha, with two decimal places) of all spaces that have a suitability of greater than 0.5?<a href="#q7.-what-is-the-area-in-ha-with-two-decimal-places-of-all-spaces-that-have-a-suitability-of-greater-than-0.5" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+</div>
+<div id="q8.-what-are-the-differences-between-suitability-and-capability-models" class="section level5 unnumbered hasAnchor">
+<h5>Q8. What are the differences between suitability and capability models?<a href="#q8.-what-are-the-differences-between-suitability-and-capability-models" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<hr />
+</div>
+</div>
+<div id="task-4-build-a-suitability-model" class="section level2 unnumbered hasAnchor">
+<h2>Task 4: Build a Suitability Model<a href="#task-4-build-a-suitability-model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Models allow for easy replication of tasks. You will be building a model using the workflow in Task 3.</p>
+<p><strong>Step 1:</strong> Prepare model building.</p>
+<p>Open the Catalog Pane, and right-click the folder you have been saving things into. Select New&gt;Toolbox. Name the toolbox “Suitability”. Then, right-click the Toolbox and Select New&gt;Model.</p>
+<p>If ModelBuilder didn’t open automatically, right-click your Model and select “Edit”. A blank pane should appear, with your model name as the tab name. Also open History (Analysis &gt; History).</p>
+<p><strong>Step 2:</strong> Build the model!</p>
+<p>Drag and drop the completed actions from Task 3 (“Multiple Ring Buffer” and “Identity”) into the ModelBuilder pane. The tools should automatically be connected, because the results from “Multiple Ring Buffer” were used in “Identity”.</p>
+<p>If you no longer have the geoprocessing steps in History, you can (a) run the tools again, or (b) add the tools and input the variables.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>After you run the tools, they will show up in History and you can drag and drop them into the ModelBuilder pane.</p></li>
+<li><p>You can drag and drop the tools directly from their respective toolboxes within the Geoprocessing Pane. Then in ModelBuilder, you can right-click each tool (as displayed by rounded rectangles), select open, and fill out the tool options as you did in Task 3. When a section of the model is complete, the shapes will go from grey to coloured. To connect the model components, you click on a component (and while holding the pointer down), drag the arrow that appears from one component to another. Once you let go, options for what the component is in the model will pop up. Your model is not complete if it is still in grey—a complete model is coloured. However, non-connecting tools will also be coloured. The tools in your model should connect.</p></li>
+</ol>
+<p>For more help with ModelBuilder, use ArcGIS Help (Project &gt; Help &gt; ModelBuilder (in the search)).</p>
+<p><a href="https://pro.arcgis.com/en/pro-app/latest/help/analysis/geoprocessing/modelbuilder/modelbuilderquick-tour.htm" class="uri">https://pro.arcgis.com/en/pro-app/latest/help/analysis/geoprocessing/modelbuilder/modelbuilderquick-tour.htm</a></p>
+<p>Your model should look similar to the one below.</p>
+<p><img src="images/03-model.PNG" width="75%" /></p>
+<div id="q9.-why-are-models-like-this-one-valuable-when-would-you-use-this-kind-of-model" class="section level5 unnumbered hasAnchor">
+<h5>Q9. Why are models like this one valuable? When would you use this kind of model?<a href="#q9.-why-are-models-like-this-one-valuable-when-would-you-use-this-kind-of-model" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+</div>
+<div id="q10.-include-a-screenshot-of-your-model" class="section level5 unnumbered hasAnchor">
+<h5>Q10. Include a screenshot of your model<a href="#q10.-include-a-screenshot-of-your-model" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<hr />
+</div>
+</div>
+<div id="task-4-create-and-export-a-map" class="section level2 unnumbered hasAnchor">
+<h2>Task 4: Create and export a map<a href="#task-4-create-and-export-a-map" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Lastly, you will be making a map showing capability and suitability. Include your capability and suitability maps in the same layout. Include an inset of the area that is <em>most suitable</em> for a community garden.</p>
+<p>Be sure to use a proper colour ramp— quick examples of when to use which type of colour ramp can be found at the following website (<a href="https://carto.com/carto-colors/" class="uri">https://carto.com/carto-colors/</a>).</p>
+<p>What we expect to see:</p>
+<ul>
+<li>Capability Map</li>
+<li>Suitability Map</li>
+<li>Suitability Inset</li>
+<li>Necessary map components (title, legend, scale bar, north arrow,
+student name, coordinate system)</li>
+</ul>
+<p>To export the map, find “Layout” under the share tab. Select PDF as the file type, and use an appropriate resolution. Open your exported map and make sure that everything on the map is legible</p>
+<p><strong>Export your map to PDF and include it in you final report along with the other lab questions.</strong></p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": false,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
