@@ -14,7 +14,7 @@ The aim of this lab is to use LiDAR data from the City of Vancouver to create a 
 
 ------------------------------------------------------------------------
 
-## Learning Objectives {-}
+### Learning Objectives {-}
 
 -   Work with lidar data
 -   Create a DTM and DSM from a lidar pointcloud 
@@ -22,7 +22,7 @@ The aim of this lab is to use LiDAR data from the City of Vancouver to create a 
 
 ------------------------------------------------------------------------
 
-## Deliverables {-}
+### Deliverables {-}
 
 -	Answer all the questions given in the lab handout.
 -	A map of your DTM and DSM.
@@ -30,7 +30,7 @@ The aim of this lab is to use LiDAR data from the City of Vancouver to create a 
 
 ------------------------------------------------------------------------
 
-## Data {-}
+### Data {-}
 
 We will be working with LiDAR data collected over the City of Vancouver. There are two files associated with this lab:
 

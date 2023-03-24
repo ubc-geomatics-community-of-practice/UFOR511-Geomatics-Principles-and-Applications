@@ -17,23 +17,21 @@ The aim of this lab is to learn about the electromagnetic spectrum (EMS), unders
 
 ------------------------------------------------------------------------
 
-## Learning Objectives {.unnumbered}
+### Learning Objectives {.unnumbered}
 
 -   Understand the electromagnetic spectrum
-
 -   Use Landsat 5 spectral reflectance to map vegetation and urban areas 
-
 -   Analyze spectral signatures of different land cover types
 
 ------------------------------------------------------------------------
 
-## Deliverables {.unnumbered}
+### Deliverables {.unnumbered}
 
 You will need to submit your answers to the questions given in the lab handout.
 
 ------------------------------------------------------------------------
 
-## Data {.unnumbered}
+### Data {.unnumbered}
 
 We will be working with a multispectral image of Vancouver from the Landsat 5 satellite **(L5047026subset_19990922_7B.dat).**
 
