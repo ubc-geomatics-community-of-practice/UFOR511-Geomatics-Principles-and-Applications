@@ -1,6 +1,6 @@
 ```{r echo=FALSE}
 yml_content <- yaml::read_yaml("chapterauthors.yml")
-author <- yml_content[["lab5shortname"]][["author"]]
+author <- yml_content[["lidar"]][["author"]]
 ```
 # Geovisualization using LiDAR {#lidar}
 

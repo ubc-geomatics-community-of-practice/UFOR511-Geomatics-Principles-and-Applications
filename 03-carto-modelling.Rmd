@@ -6,7 +6,7 @@ editor_options:
 
 ```{r echo=FALSE}
 yml_content <- yaml::read_yaml("chapterauthors.yml")
-author <- yml_content[["lab3shortname"]][["author"]]
+author <- yml_content[["carto-modelling"]][["author"]]
 ```
 
 # Cartographic Modelling {#carto-modelling}

@@ -6,7 +6,7 @@ editor_options:
 
 ```{r echo=FALSE}
 yml_content <- yaml::read_yaml("chapterauthors.yml")
-author <- yml_content[["lab1shortname"]][["author"]]
+author <- yml_content[["geocoding-exploring-geospatial-data"]][["author"]]
 ```
 
 # Geocoding and Exploring Geospatial Data {#geocoding-exploring-geospatial-data}

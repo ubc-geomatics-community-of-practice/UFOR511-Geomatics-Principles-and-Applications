@@ -1,7 +1,7 @@
 
 ```{r echo=FALSE}
 yml_content <- yaml::read_yaml("chapterauthors.yml")
-author <- yml_content[["lab2shortname"]][["author"]]
+author <- yml_content[["GNSS-data"]][["author"]]
 ```
 
 # Collecting and processing GNSS data {#GNSS-data}
