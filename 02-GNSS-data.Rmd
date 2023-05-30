@@ -20,7 +20,7 @@ Oftentimes, you will need to collect and display your own data. There are many p
 
 ### Learning Objectives {-}
 
--   Learn how to plan for field data collection 
+-   Plan for field data collection 
 -   Use AvenzaMaps to collect GNSS readings 
 -   Assess the accuracy and precision of GNSS coordinates
 

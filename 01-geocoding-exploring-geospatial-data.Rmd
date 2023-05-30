@@ -12,7 +12,6 @@ author <- yml_content[["geocoding-exploring-geospatial-data"]][["author"]]
 # Geocoding and Exploring Geospatial Data {#geocoding-exploring-geospatial-data}
 
 Written by
-
 ```{r results='asis', echo=FALSE}
 cat(author)
 ```
@@ -23,7 +22,7 @@ Working with and manipulating your own geospatial data is essential for many geo
 
 ------------------------------------------------------------------------
 
-### Competencies in This Lab {.unnumbered}
+### Leanring Objectives {.unnumbered}
 
 -   Query and extract geospatial data from an online portal
 -   Build a custom address locator using geospatial data

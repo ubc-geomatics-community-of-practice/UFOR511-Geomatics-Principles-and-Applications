@@ -16,9 +16,8 @@ The aim of this lab is to use LiDAR data from the City of Vancouver to create a 
 
 ### Learning Objectives {-}
 
--   Work with lidar data
--   Create a DTM and DSM from a lidar pointcloud 
--   Use ArcScene to visualize a pointcloud  
+-   Process LiDAR data to standard products
+-   Augment urban scences with LiDAR derivatives 
 
 ------------------------------------------------------------------------
 

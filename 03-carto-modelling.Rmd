@@ -12,7 +12,6 @@ author <- yml_content[["carto-modelling"]][["author"]]
 # Cartographic Modelling {#carto-modelling}
 
 Written by
-
 ```{r results='asis', echo=FALSE}
 cat(author)
 ```

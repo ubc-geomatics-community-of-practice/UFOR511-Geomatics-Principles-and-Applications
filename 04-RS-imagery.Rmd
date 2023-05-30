@@ -6,7 +6,6 @@ author <- yml_content[["RS-imagery"]][["author"]]
 # Remote Sensing Imagery Analysis {#RS-imagery}
 
 Written by
-
 ```{r results='asis', echo=FALSE}
 cat(author)
 ```
@@ -19,7 +18,7 @@ The aim of this lab is to learn about the electromagnetic spectrum (EMS), unders
 
 ### Learning Objectives {.unnumbered}
 
--   Understand the electromagnetic spectrum
+-   Differentiate regions of the electromagnetic spectrum for urban applications
 -   Use Landsat 5 spectral reflectance to map vegetation and urban areas 
 -   Analyze spectral signatures of different land cover types
 
