@@ -253,7 +253,7 @@ b)  You can drag and drop the tools directly from their respective toolboxes wit
 
 For more help with ModelBuilder, use ArcGIS Help (Project \> Help \> ModelBuilder (in the search)).
 
-[https://pro.arcgis.com/en/pro-app/latest/help/analysis/geoprocessing/modelbuilder/modelbuilderquick-tour.htm](https://pro.arcgis.com/en/pro-app/latest/help/analysis/geoprocessing/modelbuilder/modelbuilderquick-tour.htm){.uri}
+[https://pro.arcgis.com/en/pro-app/latest/help/analysis/geoprocessing/modelbuilder/modelbuilder-quick-tour.htm](https://pro.arcgis.com/en/pro-app/latest/help/analysis/geoprocessing/modelbuilder/modelbuilder-quick-tour.htm){.uri}
 
 Your model should look similar to the one below.
 
