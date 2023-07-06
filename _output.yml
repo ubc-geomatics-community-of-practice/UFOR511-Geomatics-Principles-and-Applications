@@ -8,6 +8,9 @@ bookdown::gitbook:
         <li><a href="./">An Open Geomatics Community of Practice</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+    view: https://github.com/ubc-geomatics-community-of-practice/UFOR511-Geomatics-Principles-and-Applications/blob/main/%s
+    download:
+      - ["https://osf.io/whqe2", "PDF"]
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
