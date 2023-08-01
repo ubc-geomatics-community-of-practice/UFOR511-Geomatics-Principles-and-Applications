@@ -26,7 +26,7 @@ Working with and manipulating your own geospatial data is essential for many geo
 
 ------------------------------------------------------------------------
 
-### Leanring Objectives {.unnumbered}
+### Learning Objectives {.unnumbered}
 
 -   Query and extract geospatial data from an online portal
 -   Build a custom address locator using geospatial data
