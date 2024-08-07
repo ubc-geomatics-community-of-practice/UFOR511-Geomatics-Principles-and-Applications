@@ -23,7 +23,7 @@
 <meta name="author" content="Paul D. Pickell" />
 
 
-<meta name="date" content="2024-08-01" />
+<meta name="date" content="2024-08-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -198,15 +198,15 @@ Amy Blood</p>
 <div id="task-1-download-and-prepare-data-1" class="section level2 unnumbered hasAnchor">
 <h2>Task 1: Download and prepare data<a href="carto-modelling.html#task-1-download-and-prepare-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Step 1:</strong> Download data.</p>
-<p>You will be downloading most of your data from the City of Vancouver Open Data Portal (CoV; <a href="https://opendata.vancouver.ca/pages/home/" class="uri">https://opendata.vancouver.ca/pages/home/</a>).</p>
+<p>You will be downloading most of your data from the City of Vancouver Open Data Portal (<a href="https://opendata.vancouver.ca/pages/home/" class="uri">https://opendata.vancouver.ca/pages/home/</a>).</p>
 <p>The datasets you will need are:</p>
 <ul>
 <li>Community Gardens and Food Trees (shapefile)</li>
 <li>Local Area Boundary (shapefile)</li>
-<li>Census Local Area Profiles 2016(xls)</li>
+<li>Census Local Area Profiles 2016 (xls)</li>
 </ul>
-<p>The final dataset (Landuse 2016) can be found on GitHub. This shapefile was downloaded from Metro Vancouver’s Open Data Catalogue; however, at least two of the polygons had errors and needed to be edited for the analysis to work properly.</p>
-<p>Download all of the lab data and put it somewhere that you can find it again.</p>
+<p>The final dataset (Landuse 2016) can be found on the course management system. This shapefile was downloaded from Metro Vancouver’s Open Data Catalogue; however, at least two of the polygons had errors and needed to be edited for the analysis to work properly.</p>
+<p>Download all of the lab data and put it in a new ArcGIS Pro project folder.</p>
 <p><strong>Step 2:</strong> Pre-process census data.</p>
 <p>Census data requires pre-processing before loading it into ArcGIS. The census data you downloaded was custom-ordered from the City of Vancouver and is delineated by Vancouver’s 22 planning districts. Open “Census Local Area Profiles 2016” in Excel. There is <strong>a lot</strong> of information in this file, and you’re encouraged to scroll through it (and/or its metadata).</p>
 <p>The first four rows in the workbook are descriptive information and need to be removed before analysis; select and delete them. Now the first row should have planning district names. The values in the second row (ID 1) represent the approximate population value in each planning district.</p>
