@@ -201,7 +201,7 @@ Right-click **parks_polygon_representation**, mouse down to Joins and Relates \>
 - **Join Operation:** Join one to one 
 - **Match Option:** Intersect
 
-Expand the Fields option and remove all of the output fields except for `area_ha`, `park_id`, `park_name`, and `park_url`. Click "OK".
+Click "OK".
 
 You should now have a park file with the number of trees (represented by JOIN_COUNT), along with the other park information.
 

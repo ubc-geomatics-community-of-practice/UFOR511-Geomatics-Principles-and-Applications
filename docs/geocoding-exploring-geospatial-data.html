@@ -319,7 +319,7 @@ Amy Blood</p>
 <li><strong>Join Operation:</strong> Join one to one</li>
 <li><strong>Match Option:</strong> Intersect</li>
 </ul>
-<p>Expand the Fields option and remove all of the output fields except for <code>area_ha</code>, <code>park_id</code>, <code>park_name</code>, and <code>park_url</code>. Click “OK”.</p>
+<p>Click “OK”.</p>
 <p>You should now have a park file with the number of trees (represented by JOIN_COUNT), along with the other park information.</p>
 <p>Add a new field called “treedensity”. Select float as the data type–the data in this field will be continuous values and include decimals. Tree density is the ratio of trees to park area. We will do this calculation only for parks greater than or equal to one hectare in size.</p>
 <p>Using “Select By Attributes,” select all of the parks with an area greater than or equal to 1 ha. Then, calculate the treedensity field as <code>JOIN_COUNT / area_ha</code>.</p>

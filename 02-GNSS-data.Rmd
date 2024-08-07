@@ -54,11 +54,11 @@ Your study area must:
 - Be a park or a greenspace
 - Have at least a portion of its ground visible using aerial imagery (e.g. Google Earth or an ArcGIS Pro basemap)
 
-**Step 1:**  Open ArcGIS Pro and turn on an imagery basemap (Map > Basemap > Imagery). Navigate to your proposed study area. You can do this by (a) dragging around your map, (b) putting coordinates into Go To XY, (c) typing in an address or park name into the Locate tool.
+**Step 1:** Open ArcGIS Pro and turn on an imagery basemap (Map > Basemap > Imagery). Navigate to your proposed study area. You can do this by (a) dragging around your map, (b) putting coordinates into Go To XY, (c) typing in an address or park name into the Locate tool.
 
 Before physically visiting your study area, you will need to verify that there are usable reference points in your chosen park. The reference points should be immovable, viewable from the sky and ground, and not tall (not trees or buildings). Additionally, you will be walking to your points – so they should be somewhere safely accessible and not too close or too far from each other.
 
-**Step 2:**Find at least four possible reference points (all at least 10 m from each other). You will create a new shapefile and populate it with these reference points. In Geoprocessing, find the Create Feature Class tool by searching for “Create Feature Class”. Save it to a findable location and give it a meaningful name (for this lab, it will be called “refpoints”). For the other options:
+**Step 2:** Find at least four possible reference points (all at least 10 m from each other). You will create a new shapefile and populate it with these reference points. In Geoprocessing, find the Create Feature Class tool by searching for “Create Feature Class”. Save it to a findable location and give it a meaningful name (for this lab, it will be called “refpoints”). For the other options:
 
 - **Geometry Type:** Point
 - **Has M:** No
@@ -177,7 +177,7 @@ Planning **(10 points)**
 
 - Basic information about the study area – why it was chosen, where it is, etc. **(2 points)**
 - A description of each reference point – what is each reference point? **(2 points)**
-- A runthrough of the results from the GNSS planning tool. When is the ideal time to go out and why? Include screenshots from the planning tool (# of satellites, DOPs, ionosphere, skyplot) and interpret them. **(6 points)*
+- A runthrough of the results from the GNSS planning tool. When is the ideal time to go out and why? Include screenshots from the planning tool (# of satellites, DOPs, ionosphere, skyplot) and interpret them. **(6 points)**
 
 Data Collection **(5 points)**
 
