@@ -23,7 +23,7 @@
 <meta name="author" content="Paul D. Pickell" />
 
 
-<meta name="date" content="2024-08-07" />
+<meta name="date" content="2024-08-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -186,7 +186,7 @@ Paul D. Pickell</p>
 </div>
 <div id="deliverables-1" class="section level3 unnumbered hasAnchor">
 <h3>Deliverables<a href="GNSS-data.html#deliverables-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>During this lab, you should be taking notes so that you are able to write a brief report about your study area and discuss the GNSS collection and processing procedure. You will be submitting a one-page writeup, described in detail toward the end of the lab.</p>
+<p>During this lab, you should be taking notes so that you are able to write a brief report about your study area and discuss the GNSS collection and processing procedure. You will be submitting a two-page report, described in detail toward the end of the lab.</p>
 <hr />
 </div>
 </div>
@@ -245,7 +245,7 @@ At all times, you must be aware of possible hazards both overhead and underfoot.
 <p><strong>Step 4:</strong> Ensure that the Avenza Maps App is allowed to access your location, camera, and photos in your <em>phone’s settings</em>.</p>
 <p><img src="images/02-phone.png" width="75%" /></p>
 <p><em>Important: Personal location is very sensitive information. You should not undertake this exercise at your home or share the coordinates or screenshots of your home location in Avenza Maps with anyone, including the instructor, TA, or other students in this course. Treat personal location information as any other private sensitive information and handle with respect and care.</em></p>
-<p><strong>Step 5:</strong> Avenza Maps requires you to load a map before being able to use the location service of your phone. You will import the georeferenced PDF map that you created in Task 1. There are several ways to do this in Avenza Maps, but probably the easiest is to download the PDF to your phone and then import directly from your phone. <em>Be aware that map size can be large and will consume cellular data if you are not connected to a wifi network.</em> A video on Canvas shows how to accomplish this on iOS using an iPhone and an example georeferenced map of the world.</p>
+<p><strong>Step 5:</strong> Avenza Maps requires you to load a map before being able to use the location service of your phone. You will import the georeferenced PDF map that you created in Task 1. There are several ways to do this in Avenza Maps, but probably the easiest is to download the PDF to your phone and then import directly from your phone. <em>Be aware that map size can be large and will consume cellular data if you are not connected to a wifi network.</em></p>
 <p>If you ran into problems creating your georeferenced PDF, then you can use the provided georeferenced PDF on Canvas for the world. In the end, the actual map that you use is not important for collecting your GNSS data, but Avenza Maps requires a georeferenced map be loaded in the app.</p>
 <p><strong>Step 6:</strong> Travel to your study area!!! Open the Avenza app, and select the Georeferenced PDF under “My Maps.” Go to one of the reference points you selected in ArcGIS. On the bottom right of the app, there is a button that will bring the map to your current area. Press that button, then press the placemark button directly to the right of it. Create a placemark and name it something meaningful (for example: placemark 1, location 1). Stay exactly where you are, and create a placemark every 10 seconds for the next minute by pressing the location button then the placemark. You should have a total of 6 placemarks. Take a picture of the area you are trying to geographically capture. Go to two more of your designated locations and do the same procedure (create 6 placemarks, each 10 seconds apart, and take a picture.</p>
 <p><strong>Step 7:</strong> Now you can return back to your workstation (after taking a nice walk!). In Avenza, go back to “My Maps,” then select Layers (at the bottom). Select the layer you created, then the icon with three lines at the bottom right. Choose export layers. Export the layer as a KML by pressing the EXPORT option at the top right. A list of export applications should pop up—choose whichever one you would prefer.</p>
@@ -255,7 +255,7 @@ At all times, you must be aware of possible hazards both overhead and underfoot.
 <div id="task-3-assess-precision-accuracy-and-possible-errors" class="section level2 unnumbered hasAnchor">
 <h2>Task 3: Assess Precision, Accuracy, and Possible Errors<a href="GNSS-data.html#task-3-assess-precision-accuracy-and-possible-errors" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>For this lab, we will consider the initial ArcGIS-created reference points as the “true” values and perform an accuracy assessment with that in mind.</p>
-<p><strong>Step 1:</strong> Visually compare the Avenza-created Placemarks (called “Observed values” for the rest of the lab) with each other and ArcGIS reference points. How close/far are they from one another? You can use the measure tool to add values to this visual assessment. When you are comparing the observed values Page 10 of 12to each other, you are assessing precision, when you are comparing them to the “True” locations, you are assessing accuracy.</p>
+<p><strong>Step 1:</strong> Visually compare the Avenza-created Placemarks (called “Observed values” for the rest of the lab) with each other and ArcGIS reference points. How close/far are they from one another? You can use the measure tool to add values to this visual assessment. When you are comparing the observed values to each other, you are assessing precision, when you are comparing them to the “True” locations, you are assessing accuracy.</p>
 <p><strong>Step 2:</strong> Quantitatively determine the accuracy of the points. Add two columns in the Observed attribute table and populate them with the east and north values for each point. You should have the True values from your reference point attribute table. Export both tables and bring them into excel.</p>
 <p>Calculate the horizontal accuracy for each placemark using the following equation:</p>
 <p><span class="math inline">\(\sigma_{H_{acc}} = \sqrt{(\overline{E} - E_{true})^2 + (\overline{N} - N_{true})^2}\)</span></p>

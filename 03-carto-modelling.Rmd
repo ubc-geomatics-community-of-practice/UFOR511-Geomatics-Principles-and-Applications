@@ -46,13 +46,13 @@ For this lab, you are using overlay and proximity tools to determine where in th
 
 You will be downloading most of your data from the City of Vancouver Open Data Portal (<https://opendata.vancouver.ca/pages/home/>).
 
-The datasets you will need are:
+The datasets you will need to download from the open data portal above are:
 
 -   Community Gardens and Food Trees (shapefile)
 -   Local Area Boundary (shapefile)
 -   Census Local Area Profiles 2016 (xls)
 
-The final dataset (Landuse 2016) can be found on the course management system. This shapefile was downloaded from Metro Vancouver's Open Data Catalogue; however, at least two of the polygons had errors and needed to be edited for the analysis to work properly.
+A fourth dataset (Landuse 2016) can be found on the course management system. This shapefile was downloaded from Metro Vancouver's Open Data Catalogue; however, at least two of the polygons had errors and needed to be edited for the analysis to work properly.
 
 Download all of the lab data and put it in a new ArcGIS Pro project folder.
 

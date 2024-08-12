@@ -28,7 +28,7 @@ Oftentimes, you will need to collect and display your own data. There are many p
 
 ### Deliverables {-}
 
-During this lab, you should be taking notes so that you are able to write a brief report about your study area and discuss the GNSS collection and processing procedure. You will be submitting a one-page writeup, described in detail toward the end of the lab.
+During this lab, you should be taking notes so that you are able to write a brief report about your study area and discuss the GNSS collection and processing procedure. You will be submitting a two-page report, described in detail toward the end of the lab.
 
 ------------------------------------------------------------------------
 
@@ -118,7 +118,7 @@ Next, we will set the units to metric. In Settings, navigate to “Units of Meas
 
 *Important: Personal location is very sensitive information. You should not undertake this exercise at your home or share the coordinates or screenshots of your home location in Avenza Maps with anyone, including the instructor, TA, or other students in this course. Treat personal location information as any other private sensitive information and handle with respect and care.*
 
-**Step 5:** Avenza Maps requires you to load a map before being able to use the location service of your phone. You will import the georeferenced PDF map that you created in Task 1. There are several ways to do this in Avenza Maps, but probably the easiest is to download the PDF to your phone and then import directly from your phone. *Be aware that map size can be large and will consume cellular data if you are not connected to a wifi network.* A video on Canvas shows how to accomplish this on iOS using an iPhone and an example georeferenced map of the world. 
+**Step 5:** Avenza Maps requires you to load a map before being able to use the location service of your phone. You will import the georeferenced PDF map that you created in Task 1. There are several ways to do this in Avenza Maps, but probably the easiest is to download the PDF to your phone and then import directly from your phone. *Be aware that map size can be large and will consume cellular data if you are not connected to a wifi network.*
 
 If you ran into problems creating your georeferenced PDF, then you can use the provided georeferenced PDF on Canvas for the world. In the end, the actual map that you use is not important for collecting your GNSS data, but Avenza Maps requires a georeferenced map be loaded in the app.
 
@@ -134,7 +134,7 @@ If you ran into problems creating your georeferenced PDF, then you can use the p
 
 For this lab, we will consider the initial ArcGIS-created reference points as the "true" values and perform an accuracy assessment with that in mind.
 
-**Step 1:** Visually compare the Avenza-created Placemarks (called “Observed values” for the rest of the lab) with each other and ArcGIS reference points. How close/far are they from one another? You can use the measure tool to add values to this visual assessment. When you are comparing the observed values Page 10 of 12to each other, you are assessing precision, when you are comparing them to the “True” locations, you are assessing accuracy.
+**Step 1:** Visually compare the Avenza-created Placemarks (called “Observed values” for the rest of the lab) with each other and ArcGIS reference points. How close/far are they from one another? You can use the measure tool to add values to this visual assessment. When you are comparing the observed values to each other, you are assessing precision, when you are comparing them to the “True” locations, you are assessing accuracy.
 
 **Step 2:** Quantitatively determine the accuracy of the points. Add two columns in the Observed attribute table and populate them with the east and north values for each point. You should have the True values from your reference point attribute table. Export both tables and bring them into excel.
 
