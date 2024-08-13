@@ -72,7 +72,7 @@ Show rows where Variable:
 
 Click OK.
 
-Be sure to either type the variable names EXACTLY as they appear, or select them from the dropdown menu in the Custom Autofilter window (the variables are alphabetized but there are *many* of them).
+Be sure to either type the variable names EXACTLY as they appear, or select them from the dropdown menu in the Custom Autofilter window (the variables are alphabetized but there are *many* of them). If the filter does not work, you can search for the columns using the control/command-f feature and manually select the appropriate rows.
 
 You should have only two rows of data, with IDs 1 and 3964. Copy the data and column names, create a new sheet, then Paste Special them transposed into the new sheet. The transpose option is underlined in red within the image below.
 
@@ -105,7 +105,7 @@ For the tool:
 
 Click OK.
 
-Open the attribute table of local-area-boundary.shp to verify that the join succeeded. If the join did not succeed, it is likely because the cells in census.csv did not exactly match those in local-area-boundary.shp. Double-check that the spacing is the same for both datasets.
+Open the attribute table of local-area-boundary.shp to verify that the join succeeded. If the join did not succeed, it is likely because the cells in census.csv did not exactly match those in local-area-boundary.shp. Double-check that the spacing is the same for both datasets. If the Arbutus-Ridge neighbourhood does not have a match, ensure that the "-" is present in both tables and manually enter it if it is missing. Your join should automatically update. 
 
 To redo the join, right-click the shapefile in Contents \> Joins and Relates.. \> Remove All Joins. Then repeat Step 3.
 
@@ -145,6 +145,8 @@ With these selected, you are going to run the "Identity" tool. For the tool:
 Click OK.
 
 Your result will have the same extent as **local-area-boundary.shp**, and will have polygons for each neighborhood and each capable location. There should be three unique values in LU_code: R100, U100, and no value (the cells should be blank). Change the symbology of resulting shapefile (by LU_code) and look at what you have; everything that has a blank LU_code is incapable.
+
+It is possible that the input will erroneously apply attributes from some Landuse2016 polygons to larger areas. Verify that there are no excessively large parcels, such as in the area of the Musqueam 2 reservation. Identify which landcover FID is causing the issue, and then manually de-select it before re-running the identity tool.
 
 Create a new field (of Data Type Short) called capable, and populate it with the number 1 for capable areas and the number 0 for incapable areas. This can be done using Select By Attributes and Calculate Field (once the selected polygons are populated with 1, you can switch the selection and populate the others with 0).
 
@@ -208,6 +210,8 @@ Community garden building will be prioritized in low income areas. In **Van_Suit
 To scale the income values, you will divide the income values by the maximum income value. However, this result causes higher income areas to have values closer to 1 and lower income areas to have values closer to 0. The result should then be subtracted from 1. The equation would look something like this:
 
 `inc_suit = 1 – (med_hou_inc/max(med_hou_inc))`
+
+You may have to manually identify the maximum value in med_hou_inc by right clicking on the attribute and selecting "Explore Statistics".
 
 **Step 3:** Calculate suitability.
 
