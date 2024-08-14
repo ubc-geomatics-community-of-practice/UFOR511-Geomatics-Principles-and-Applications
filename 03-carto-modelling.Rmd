@@ -129,7 +129,7 @@ For the tool:
 -   **Input Rows:** Landuse2016
 -   **Selection Type:** New selection
 -   **+New Expression: Where** LU_code is equal to R100
--   **+Add Clause** And areaha is greater than 0.
+-   **+Add Clause** And areaha is greater than 0.1
 -   **+Add Clause** Or LU_Code is equal to U100
 -   **+Add Clause** And areaha is greater than 0.1
 
