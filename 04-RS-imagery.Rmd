@@ -185,7 +185,7 @@ You can experiment with different band combinations by visualizing different ban
 
 Right click the bands in the Contents pane, turn different layers on and off by clicking the check mark off and on in the IsVisible section. Zoom and pan around and investigate different areas of Vancouver that you may know. Feel free to use google maps or google earth to help you orient yourself. 
 
-##### Q8. In a false color composite where near landsat band 5 is mapped to the red color channel, band 4 is mapped to the green color channel, and band 3 is mapped to the blue color channel, match the following cover types to the colors that they appear in the image. {.unnumbered}
+##### Q8. In a false color composite where near landsat band 5 is mapped to the red color channel, band 4 is mapped to the green color channel, and band 3 is mapped to the blue color channel, match the following cover types to the colors that they appear in the image: healthy vegetation, urban cover, silty water, and clear water. {.unnumbered}
 
 ##### Q9. Experiment with many different false colour composites. Which 3 bands would you combine if you wanted to analyze vegetation? Do some light research on spectral properties and the applications of different landsat bands and write a sentence or two justifying each of your choices. Then, append a screenshot of your chosen composite to your response. {.unnumbered}
 
@@ -231,7 +231,7 @@ NDVI is calculated with the below formula:
 
 $\ NDVI = \frac{(NIR - RED)}{(NIR+RED)}$
 
-Where NIR is the near-infrared band (Landsat 7 Band 4) and Red is the red band (Landsat 7 Band 4). The results of this equation should be between -1 and 1 with values less than 0 representing water and values between 0-1 representing different levels of green vegetation. 
+Where NIR is the near-infrared band (Landsat 5 Band 4) and Red is the red band (Landsat 5 Band 3). The results of this equation should be between -1 and 1 with values less than 0 representing water and values between 0-1 representing different levels of green vegetation. 
 
 While ArcGIS Pro contains a built-in tool to calculate NDVI and a series of other spectral indices, in this lab we will be using the “band arithmetic” function and the above equation to create our own NDVI tool. 
 
