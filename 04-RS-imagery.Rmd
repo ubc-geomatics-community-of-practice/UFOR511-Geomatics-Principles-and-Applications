@@ -255,13 +255,13 @@ The “Band Arithmetic Properties” dialogue should appear. Under “Raster” 
 
 Use your knowledge of spectral indices, the NDVI formula given above and the table below fill in the NDVI calculation for your data. 
 
-##### Q15. Take a screenshot of your band arithmetic equation for ndvi. {.unnumbered}
+##### Q15. Take a screenshot of your band arithmetic equation for NDVI. {.unnumbered}
 
-##### Q16. What are the minimum and maximum values of your new ndvi layer? {.unnumbered}
+##### Q16. What are the minimum and maximum values of your new NDVI layer? {.unnumbered}
 
 ##### Q17. What do the dark areas in the image represent? The gray areas? The white? {.unnumbered}
 
-##### Q18. What information does this type of analysis give us? When and why might this tpye of analysis be used? {.unnumbered}
+##### Q18. What information does this type of analysis give us? When and why might this type of analysis be used? {.unnumbered}
 
 We will now use the “Band Arithmetic” window to calculate the Normalized Difference Built-Up Index (NDBI). The NDBI highlights urban areas where there is typically a higher reflectance in the shortwave-infrared region compared to the near-infrared region. The equation is as follows: 
 
