@@ -128,13 +128,15 @@ Figure 4. Lidar derived DSM of UBC Vancouver Campus
 
 ------------------------------------------------------------------------
 
-## Task 4: Exploring a scene  {-}
+## Task 5: Exploring a scene  {-}
 
-Step 1: The first thing that we will do is add a Local Scene (Insert New Map -> New Local Scene). Add Vancouver_Ortho.tif to the scene. We can navigate through the scene using the mouse, or the on-screen navigator (Figure 6). You can learn more about navigation in ArcGIS Pro here: https://pro.arcgis.com/en/pro-app/latest/help/mapping/navigation/navigation-in-arcgis-pro.htm
+**Step 1:** The first thing that we will do is add a Local Scene (Insert New Map -> New Local Scene). Add Vancouver_Ortho.tif to the scene. We can navigate through the scene using the mouse, or the on-screen navigator (Figure 5). You can learn more about navigation in ArcGIS Pro here: https://pro.arcgis.com/en/pro-app/latest/help/mapping/navigation/navigation-in-arcgis-pro.htm
 
 ```{r 05-nav, out.width= "20%", echo = FALSE}
     knitr::include_graphics("images/05-nav.png")
 ```
+
+Figure 5. ArcGIS Pro Scene navigator.
 
 Take some time to play around and explore the scene. One thing we notice is that the imagery does not match the ‘ground’. This is because the ground in the scene is using the default global service, which has a resolution of between 10 and 30 meters. We need to create a custom ground surface to elevate the orthophoto.
 
@@ -144,13 +146,13 @@ Take some time to play around and explore the scene. One thing we notice is that
 
 **Step 4:** Sometimes it is useful to exaggerate height differences to show a particular aspect of your dataset. To do this, click on ‘ground’ and navigate to the ‘Appearance’ tab (on the top bar). You can play around with the vertical exaggeration here and see how data is displayed differently. You might also be interested in changing the lighting of the scene in order to show what your data looks like at a certain time. Right click on ‘Scene’ and select ‘Properties’ (on the left side of the screen) to access illumination properties. This section is where you can experiment with the lighting of your scene (for example you can set a date and time).  
 
-**Step 5:** Export a scene of your choice. With a figure caption, describe what we are looking at, and whether you changed the vertical exaggeration or illumination in the scene (Figure 7).
+**Step 5:** Export a scene of your choice. With a figure caption, describe what we are looking at, and whether you changed the vertical exaggeration or illumination in the scene (Figure 6).
 
 ```{r 05-scene, out.width= "75%", echo = FALSE}
     knitr::include_graphics("images/05-scene.png")
 ```
 
-Figure 7: An example of a scene from UBC Campus.
+Figure 6: An example of a scene from UBC Campus.
 
 ##### Q14. Export a screenshot of a scene of you choice as described in step 5 of the previous section. {.unnumbered}
 

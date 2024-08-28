@@ -23,7 +23,7 @@
 <meta name="author" content="Paul D. Pickell" />
 
 
-<meta name="date" content="2024-08-22" />
+<meta name="date" content="2024-08-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -145,7 +145,7 @@
 <li class="chapter" data-level="" data-path="lidar.html"><a href="lidar.html#task-2-create-a-digital-terrain-model"><i class="fa fa-check"></i>Task 2: Create a Digital Terrain Model</a></li>
 <li class="chapter" data-level="" data-path="lidar.html"><a href="lidar.html#task-3-create-a-digital-surface-model-dsm"><i class="fa fa-check"></i>Task 3: Create a Digital Surface Model (DSM)</a></li>
 <li class="chapter" data-level="" data-path="lidar.html"><a href="lidar.html#task-4-create-a-map"><i class="fa fa-check"></i>Task 4: Create a map</a></li>
-<li class="chapter" data-level="" data-path="lidar.html"><a href="lidar.html#task-4-exploring-a-scene"><i class="fa fa-check"></i>Task 4: Exploring a scene</a></li>
+<li class="chapter" data-level="" data-path="lidar.html"><a href="lidar.html#task-5-exploring-a-scene"><i class="fa fa-check"></i>Task 5: Exploring a scene</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -279,17 +279,18 @@ Figure 2: Viewing and filtering the dataset</p>
 <p><em>Include a PDF of your map in your final deliverables</em></p>
 <hr />
 </div>
-<div id="task-4-exploring-a-scene" class="section level2 unnumbered hasAnchor">
-<h2>Task 4: Exploring a scene<a href="lidar.html#task-4-exploring-a-scene" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Step 1: The first thing that we will do is add a Local Scene (Insert New Map -&gt; New Local Scene). Add Vancouver_Ortho.tif to the scene. We can navigate through the scene using the mouse, or the on-screen navigator (Figure 6). You can learn more about navigation in ArcGIS Pro here: <a href="https://pro.arcgis.com/en/pro-app/latest/help/mapping/navigation/navigation-in-arcgis-pro.htm" class="uri">https://pro.arcgis.com/en/pro-app/latest/help/mapping/navigation/navigation-in-arcgis-pro.htm</a></p>
+<div id="task-5-exploring-a-scene" class="section level2 unnumbered hasAnchor">
+<h2>Task 5: Exploring a scene<a href="lidar.html#task-5-exploring-a-scene" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Step 1:</strong> The first thing that we will do is add a Local Scene (Insert New Map -&gt; New Local Scene). Add Vancouver_Ortho.tif to the scene. We can navigate through the scene using the mouse, or the on-screen navigator (Figure 5). You can learn more about navigation in ArcGIS Pro here: <a href="https://pro.arcgis.com/en/pro-app/latest/help/mapping/navigation/navigation-in-arcgis-pro.htm" class="uri">https://pro.arcgis.com/en/pro-app/latest/help/mapping/navigation/navigation-in-arcgis-pro.htm</a></p>
 <p><img src="images/05-nav.png" width="20%" /></p>
+<p>Figure 5. ArcGIS Pro Scene navigator.</p>
 <p>Take some time to play around and explore the scene. One thing we notice is that the imagery does not match the ‘ground’. This is because the ground in the scene is using the default global service, which has a resolution of between 10 and 30 meters. We need to create a custom ground surface to elevate the orthophoto.</p>
 <p><strong>Step 2:</strong> Create a higher resolution DSM. Filter the LAS dataset by first returns and toggle off returns classified as unassigned and noise as you did in Task 2. Using the ‘LAS Dataset to Raster’ tool, create a raster called ‘VAN_DSM2m’ with a resolution of 2 meters, binning the data by ‘Maximum’.</p>
 <p><strong>Step 3:</strong> In the Contents pane, right-click Ground, located below the Elevation Surfaces group layer. Click ‘Add Elevation Source’. Browse to the location of VAN_DSM2m and select it. You can now start to see how the surface features have been incorporated into the surface. Make sure to zoom in to look at areas with high relief and roads. Look at some of the trees on Main Mall. Why might these trees look strange?</p>
 <p><strong>Step 4:</strong> Sometimes it is useful to exaggerate height differences to show a particular aspect of your dataset. To do this, click on ‘ground’ and navigate to the ‘Appearance’ tab (on the top bar). You can play around with the vertical exaggeration here and see how data is displayed differently. You might also be interested in changing the lighting of the scene in order to show what your data looks like at a certain time. Right click on ‘Scene’ and select ‘Properties’ (on the left side of the screen) to access illumination properties. This section is where you can experiment with the lighting of your scene (for example you can set a date and time).</p>
-<p><strong>Step 5:</strong> Export a scene of your choice. With a figure caption, describe what we are looking at, and whether you changed the vertical exaggeration or illumination in the scene (Figure 7).</p>
+<p><strong>Step 5:</strong> Export a scene of your choice. With a figure caption, describe what we are looking at, and whether you changed the vertical exaggeration or illumination in the scene (Figure 6).</p>
 <p><img src="images/05-scene.png" width="75%" /></p>
-<p>Figure 7: An example of a scene from UBC Campus.</p>
+<p>Figure 6: An example of a scene from UBC Campus.</p>
 <div id="q14.-export-a-screenshot-of-a-scene-of-you-choice-as-described-in-step-5-of-the-previous-section." class="section level5 unnumbered hasAnchor">
 <h5>Q14. Export a screenshot of a scene of you choice as described in step 5 of the previous section.<a href="lidar.html#q14.-export-a-screenshot-of-a-scene-of-you-choice-as-described-in-step-5-of-the-previous-section." class="anchor-section" aria-label="Anchor link to header"></a></h5>
 </div>
