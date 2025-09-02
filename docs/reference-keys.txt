@@ -1,5 +1,0 @@
-geocoding-exploring-geospatial-data
-GNSS-data
-carto-modelling
-RS-imagery
-lidar

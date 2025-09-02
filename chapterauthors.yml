@@ -1,10 +1,14 @@
-geocoding-exploring-geospatial-data:
-  author: Amy Blood
-GNSS-data:
+exploring-spatial-data:
   author: Paul D. Pickell
-carto-modelling:
-  author: Amy Blood
-RS-imagery:
+
+collecting-and-processing-gnss-data:
   author: Paul D. Pickell
-lidar:
-  author: Francois du Toit
+  
+cartographic-modelling-with-forest-inventories:
+  author: Sadie Russell
+
+remote-sensing-image-analysis:
+  author: Paul D. Pickell 
+  
+lidar-for-forest-management:
+  author: Hana Travers-Smith
